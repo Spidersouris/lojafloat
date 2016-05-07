@@ -1,0 +1,19 @@
+.block-layered-nav dd ol li a,
+.block-blog dd ol li a{
+    display: initial;
+    padding: 0px 0px;
+}
+.products-grid .product-name{letter-spacing: 0px;}
+ol.ordered-list li a{display: block;padding: 5px 0px;}
+.img-box .product-image {padding: 1px; margin: 0 auto;display: block; position:relative; /* Labels (e.g. "sale") are positioned relative to this box */ }
+.header-primarycontainer.header2{padding: 30px 0px;border-bottom: 1px solid #D6D6D6;}
+.header2 .logo{text-align: left;}
+.header2 .search-wrapper-centered .form-search{float: left;}
+.header2 .quick-search{margin-top: 10px;}
+.nav-maincontainer.header2 {margin-top: 0px;}
+.top-links.header2{margin-left: 35px;}
+.products-list .product-name, .products-grid .product-name, h3.product-name{font-weight: normal;}
+
+.tags h4{display: inline;}
+.postContent.feature img{background-color: #FBFBFB;}
+.widget-latest .block-images{padding: 0px 15px 10px 0px;}

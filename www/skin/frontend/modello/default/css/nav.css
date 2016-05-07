@@ -1,0 +1,250 @@
+
+@media only screen and (min-width: 1042px)  {
+
+#nav li { display: inline-table; }
+#nav li { text-align:left;}
+#nav a,
+#nav a:hover { display:block; line-height:13px; text-decoration:none;  }
+/*#nav span { display:inline-block;  }*/
+#nav li ul li a {}
+
+/* 2nd Level */
+#nav  ul { top: 46px; left:-10000px;}
+#nav ul.level0 { position:absolute; z-index: 1501; padding: 20px 32px 15px 32px; }
+
+
+
+/********** Navigation > */
+/* ======================================================================================= */
+
+/* Default Navigation ***********/
+.nav-container{}
+.nav-container #nav {  /*float:left;*/ /*padding:0px 0px 0px 14px;*/ /*position: relative;*/text-transform:capitalize;}
+.nav-container #nav a {  }
+.nav-container #nav li{}
+.nav-container #nav li:hover{}
+.nav-container #nav li, .nav-container #nav li:hover{position: relative;}
+.nav-container #nav a{display: block;font-size: 16px;position: relative;font-weight: 700;padding: 22px 30px;text-transform: uppercase;}
+.nav-container #nav li a.over{color: #2ba08b;}
+.nav-container #nav a:hover{color: #2ba08b;}
+.nav-container #nav li.active a.level-top{color: #2ba08b;}
+
+/* 2nd Level */
+.nav-container #nav ul { position:absolute; width:253px; top:100%;margin-top: 5px; left:-10000px; z-index: 10000; border: 1px solid #D6D6D6;border-top: none;background-color: #FFFFFF;}
+.nav-container #nav div ul { position:static; width:auto;  }
+
+.nav-container #nav li ul li{float: none;display: inherit;}
+.nav-container #nav li ul li a{text-transform:inherit;line-height:normal;display:block;padding: 13px 20px;border-bottom: 1px solid #D6D6D6;font-weight: bold;font-size: 14px;}
+.nav-container #nav li ul li.last > a{border-bottom: none;}
+.nav-container #nav li ul li a span{padding: 0px !important;}
+.nav-container #nav li ul li a span.errow{font-family: 'FontAwesome';}
+.nav-container #nav li ul li a.over{background-color: #F5F5F5;}
+.nav-container #nav li ul li a:hover{background-color: #F5F5F5;}
+.nav-container #nav li ul li ,.nav-container #nav li ul li:hover{margin:0px;}
+.nav-container #nav li ul li:last-child a{}
+.nav-container #nav li ul li.last a{}
+.nav-container #nav li ul li a span{}
+
+/*Category Label*/
+.nav-container #nav li ul li a span.category-label{top: inherit;padding: 0 6px !important;margin-left: 0px;right: 10px;margin-top: -2px;}
+.nav-container #nav li ul li a span.category-label:before{display: none;}
+
+/*Fixed Header Label*/
+.nav-maincontainer.fixed div.menu a span.category-label,
+.nav-maincontainer.fixed .nav-container #nav a span.category-label{
+  display: none;
+}
+/*/* 3rd+ Level */
+.nav-container #nav ul ul,
+.nav-container #nav ul div { top:0px; margin-top: 0px;}
+.nav-container #nav ul span,
+.nav-container #nav ul li.last li span {}
+.nav-container #nav li ul li ul.shown-sub {left:210px;border-top: 1px solid #D6D6D6;}
+.nav-container #nav li ul.shown-sub, #nav li .shown-sub {left:0px;padding:0px;}
+.nav-container #nav li ul.shown-sub {}
+
+
+/* ======================================================================================= */
+
+}
+
+
+
+/* Responsive Menu
+======================================================================================= */
+
+@media screen and (max-width: 1041px) {
+
+    .toggleMenu {
+        height: 60px;
+        font-weight: 700;
+        line-height: 60px;
+        font-size: 17px;
+        /*padding-left: 20px;*/
+        /*padding-right: 20px;*/
+        display: inherit !important;
+        text-transform: uppercase;
+        text-align: left;
+    }
+    .toggleMenu.active,
+    .toggleMenu:hover{color: #2ba08b;}
+    .toggleMenu:before{font-family: FontAwesome;padding-right: 7px;}
+    
+    #nav {
+        list-style: none;
+        position: absolute;
+        z-index: 999;
+        margin-top: 0px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        text-align: left;
+        width: 100%;
+        margin: 0 auto;
+        background-color: #323a45;
+        left: 0;
+        right: 0;
+        margin-top: 5px;
+    }
+    
+    #nav:before,
+    #nav:after {
+        content: " "; 
+        display: table; 
+    }
+    #nav:after {
+        clear: both;
+    }
+    #nav ul {
+        list-style: none;
+        width: 9em;
+        background: none !important;
+    }
+    #nav a {
+        padding: 15px 60px 15px 20px;
+        margin-right: 0px;
+        display: block;
+        text-decoration: none;
+        font-size: 14px;
+        color: #FFF !important;
+        letter-spacing: 0.50px;
+    }
+    #nav a.over{background-color: transparent !important;}
+    #nav a:hover,
+    #nav li.active a.level-top{
+        background-color: #2ba08b !important;
+    }
+    
+    .nav-container #nav a span.category-label{
+        top: inherit !important;
+        margin-left: 5px;
+        right: 60px;
+        margin-top: -2px;
+    }
+    .nav-container #nav a span.category-label:before{
+        display: none;
+    }
+    #nav li {
+        position: relative;
+    }
+    #nav li a{
+        border-bottom: 1px solid rgba(160, 160, 160, 0.22);
+    }
+    #nav > li {
+        float: left;
+        list-style-type:none;
+    }
+    #nav > li > .parent {
+        background-image: url("http://webdesigntutsplus.s3.amazonaws.com/tuts/378_tessa/tessa-lt-dropdowns-21c7868/images/downArrow.png");
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+    #nav > li > a {
+        display: block;
+    }
+    #nav > li > a:active{
+    
+    }
+    #nav li  ul {
+        position: absolute;
+        left: -9999px;
+    }
+    #nav > li.hover > ul {
+        left: 0;
+    }
+    #nav li li.hover ul {
+        left: 100%;
+        top: 0;
+    }
+    
+    #nav li li a {
+        display: block;
+        position: relative;
+        z-index:100;
+        padding-left: 30px;
+        text-decoration:none;
+    }
+    
+    #nav li li li a {
+        padding-left: 40px;
+        z-index:200;
+        
+    }
+
+    
+    #nav .active {
+        display: block;
+       
+    }
+    #nav > li {
+        float: none;
+    }
+    #nav > li > .parent {
+        background-position: 95% 50%;
+    }
+  
+    #nav > li > .parent {
+      background-image: none; 
+    }
+  
+    #nav li .more {
+        position: absolute;
+        right: 20px;
+        top: 7px;
+        display: block;
+        cursor: pointer;
+        font-family: FontAwesome;
+        width: 34px;
+        height: 34px;
+        background-color: #2C343D;
+        background-color: rgba(0,0,0, 0.10);
+        background-position: center center;
+        background-repeat: no-repeat;
+        border-radius: 3px;
+        color: #FFF;
+        font-size: 1.2em;
+        text-align: center;
+        line-height: 34px;
+        z-index: 101;
+        text-indent: 4px;
+    }
+
+    #nav li .more:hover{
+        background-color:#595959; /*IE*/
+        background-color:rgba(0,0,0, 0.20);        
+    }
+    
+    #nav ul {
+        display: block;
+        width: 100%;
+    }
+   #nav > li.hover > ul , #nav li li.hover ul {
+        position: static;
+    }
+   
+
+}
+
+

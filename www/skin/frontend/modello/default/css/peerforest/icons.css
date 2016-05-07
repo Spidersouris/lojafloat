@@ -1,0 +1,205 @@
+/* Icon %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+div.icon, /*backward compatibility*/
+span.icon {
+	background-color:transparent;
+	background-position:0 0;
+	background-repeat:no-repeat;
+	border-radius:50%;
+	
+	vertical-align:middle;
+	display:inline-block;
+	width:34px;
+	height:34px;
+	padding:3px;
+        font-size: 20px;
+        text-align: center;
+        line-height: 34px;
+        border-radius: 3px;
+        text-indent: 4px;
+}
+div.icon.large, /*backward compatibility*/
+span.icon.large {
+	width:50px;
+	height:50px;
+	padding:5px;
+        font-size: 30px;
+        text-align: center;
+        line-height: 50px;        
+}
+
+div.icon:before, /*Align Center*/
+span.icon:before{
+        /*margin-right: -1px;*/
+}
+
+
+/* Utility classes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* Icons: single characters (letters, numbers etc.)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+/* "i-number" - class name for backward compatibility */
+.icon.i-number,
+.icon.i-char {
+	font-size: 16px;
+	line-height: 36px;
+	font-weight: 700;
+	text-align: center;
+	text-indent: 0px;
+}
+.icon.large.i-number,
+.icon.large.i-char {
+	font-size: 20px;
+	line-height: 60px;
+	font-weight: normal;
+}
+
+/* Icon without background color */
+.icon.no-bg-color { background-color: transparent; }
+.icon.force-no-bg-color { background-color: transparent !important; }
+
+/* Shapes */
+.icon.circle		{ border-radius: 50%; }
+.icon.rounded		{ border-radius: 3px; }
+.icon.square		{ border-radius: 0; }
+
+/* All icons square (deprecated) */
+.icon-wrapper-square span.icon { border-radius: 0; }
+
+/* All icons round (deprecated) */
+.icon-wrapper-round span.icon { border-radius: 3px; }
+
+/* All icons circle (deprecated) */
+.icon-wrapper-circle span.icon { border-radius: 50%; }
+
+/* Auto-size: allow for big icons */
+.icon.auto-size { width: auto; max-width: none; height: auto; max-height: none; line-height: normal;}
+
+/* Icon background color */
+.icon-bg-color span.icon{ background-color: #2ba08b; color: #FFF;}
+
+/* Hover icon
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+/*Default Icon Hover */
+.icon-hover:hover, /* Info: was more specific: span.icon-hover:hover */
+.feature-icon-hover:hover span.icon,
+
+/*Icon Bg Color Icon Hover */
+.icon-bg-color .icon-hover:hover
+
+{
+	background-color:#595959;
+        color: #FFF;
+}
+
+/* Feature - box with icons,  text etc. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+.feature-wrapper{}
+
+/* Basic styles */
+.feature { margin:0px 0 2%; }
+.feature:after { display:block; content:"."; clear:both; font-size:0; line-height:0; height:0; overflow:hidden; }
+.feature.first { margin-top:0; }
+.feature.last { margin-bottom:0; }
+
+/* With top/bottom border line */
+.feature-wrapper.top-border{border-top: 1px solid #D6D6D6;padding: 20px 0px 0px;margin-top: 20px;}
+.feature-wrapper.bottom-border{border-bottom: 1px solid #D6D6D6;padding: 0px 0px 20px;margin-bottom: 20px;}
+
+/* Feature headings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.feature .heading {
+	font-size:1.3333em; /*16px*/
+	line-height:1.25em; /*20px*/
+	margin-bottom:0.625em; /*10px*/
+	font-weight:normal;
+}
+.feature .above-heading {
+  margin: 0px 0 10px;
+  line-height: 1.4545em;/*16px*/
+  text-transform: uppercase;
+}
+.feature .below-heading {
+	font-weight: bold;
+}
+.feature .content{
+	font-size: 14px;
+	line-height: 1.5em;
+	margin-bottom: 1em;
+	letter-spacing: 0.5px;
+}
+.feature a.go{
+        line-height: 1.22em;
+	font-size: 14px;
+}
+
+
+/* Feature icons
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.feature .icon { float:left; }
+.feature.right .icon{float: right;}
+
+
+/* Indented feature
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.feature.indent .icon { margin-bottom:0; }
+
+        /* Default icon
+        -------------------------------------------------------------- */
+        .feature .icon{margin: 0 15px 10px 0;}
+	
+	.feature.right .icon{margin: 0 0px 10px 15px;}
+
+	/* Default
+	-------------------------------------------------------------- */
+	.feature.indent { padding-left:60px; }
+	.feature.right.indent { padding-right:60px; padding-left: 0px;}
+	.feature.indent .icon { margin-left:-60px;}
+	.feature.right.indent .icon { margin-right:-60px;margin-left: 0px;}
+	
+	/* Large
+	-------------------------------------------------------------- */
+	.feature.large.indent { padding-left:80px; }
+	.feature.right.large.indent { padding-right: 80px; padding-left: 0px;}
+	.feature.large.indent .icon { margin-left:-80px; }
+	.feature.right.large.indent .icon { margin-right:-80px; margin-left: 0px;}
+
+
+
+/*Social Link Icon Hover */
+.social-link a .icon{color: #000000;margin: 2px 0px;}
+.social-link a .icon:hover{color: #FFFFFF !important;}
+.fa-facebook:hover{background-color: #3b5998!important;}
+.fa-twitter:hover{background-color: #00aced!important;}
+.fa-google-plus:hover{background-color: #dd4b39!important;}
+.fa-rss:hover{background-color: #FF7600!important;}
+.fa-pinterest:hover{background-color: #cb2128!important;}
+.fa-instagram:hover{background-color: #3f729b!important;}
+.fa-linkedin:hover{background-color: #007fb1!important;}
+.fa-vimeo-square:hover{background-color: #1ab7ea!important;}
+.fa-youtube-play:hover{background-color: #ff3333!important;}
+.fa-flickr:hover{background-color: #0063db!important;}
+.fa-envelope-o:hover{background-color: #7f7f7f!important;}
+
+/* Transitions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+span.icon-hover,
+div.icon-hover,
+.feature-icon-hover span.icon,
+.social-link a .icon
+{
+	transition:		color 300ms ease-in-out, background-color 300ms ease-in-out;
+	-moz-transition:	color 300ms ease-in-out, background-color 300ms ease-in-out;
+	-webkit-transition:	color 300ms ease-in-out, background-color 300ms ease-in-out;
+	-o-transition:		color 300ms ease-in-out, background-color 300ms ease-in-out;	
+}

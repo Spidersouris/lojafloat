@@ -1,0 +1,106 @@
+
+.ajaxcartpro_progress{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin: -22px 0 0 -22px;
+	background: url(../images/fancybox_loading.gif) center center no-repeat #000;
+	width: 44px;
+	height: 44px;
+	z-index: 9999;
+	opacity: 0.9;
+	border-radius: 6px;
+}
+#multiproduct-loader .ajaxcartpro_progress{
+	position: inherit;
+	margin: 0px;
+	display: inline-block;
+}
+
+div.alert{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.50);
+	z-index: 10010;
+	
+}
+
+div.alert-inner {
+	position: absolute;
+	right: 50%;
+	margin: auto;
+	text-align: left;
+	z-index: 10010;
+	border-top: none;
+	width: 360px;
+	bottom: 0;
+	display: table;
+	height: 178px\9;
+	padding: 40px 20px 30px;
+	max-width: 100%;
+	background-color: #FFFFFF;
+	top: 50%;
+	margin-top: -119px;
+	left: 50%;
+	margin-left: -180px;
+}
+
+/*Use Only IE 7+*/
+.lte-ie8 div.alert-inner{position: fixed;top: 50%;left: 50%;margin: -114px 0 0 -180px;z-index: 9999;}
+
+div.alert-inner .product-image{
+	float: left;
+	margin-bottom: 20px;
+}
+div.alert-inner p{
+	padding-right: 35px;
+	font-size: 1.4444em;
+	padding-left: 130px;
+	font-weight: 700;
+}
+div.alert-inner li.success-msg{
+	margin: 20px 0px;
+	list-style: none;
+	margin-left: 130px;
+	padding: 15px 20px 15px 70px !important;
+}
+div.alert-inner button.close{
+	position: absolute;
+	top: 6px;
+	right: 7px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	border: none;
+	font-size: 1.5em;
+	border-radius: 3px;
+	background-color: transparent;
+}
+div.alert-inner button.close:hover{
+	color: #2ba08b;
+}
+div.alert-inner .alertcontent{
+	text-align: center;
+	float: left;
+	width: 100%;
+}
+div.alert-inner a{
+	float: left;
+	cursor: pointer;
+}
+div.alert-inner a.cart{
+	float: right;
+}
+
+
+
+
+
+
+
+
+
+

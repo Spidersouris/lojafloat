@@ -1,0 +1,29 @@
+
+    <div id="brand" class="itemslider">
+	<?php foreach ($this->getAllManu() as $manufacturer): ?> 
+	    <div class="item">
+		<a href="<?php Mage::getURL() ?>catalogsearch/advanced/result/?manufacturer[]=<?php echo $manufacturer['value'] ?>">
+		    <?php $brandname = $manufacturer['label'] ?>
+		    <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . "brandlogo/" .$brandname . ".png"; ?>" /> 
+		    <?php // echo $manufacturer['label'] ?>
+		</a>
+	    </div>
+	<?php endforeach; ?>
+    </div>
+   
+    <script>
+	j$(document).ready(function() {
+	    j$("#brand").owlCarousel({
+		itemsCustom : [	    
+		    [0, 1],
+		    [380, 2],
+		    [625, 3],
+		    [945, 4],
+		    [1265, 5],
+		    [1360, 5],
+		    [1440, 5],
+		    [1680, 5]		    		    
+		]<?php echo Mage::helper("ExtraConfig")->sliderSetting(); ?>
+	    });
+	});
+    </script>

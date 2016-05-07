@@ -1,0 +1,298 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+$ajaxcart = Mage::getStoreConfig('mygeneral/product_list/ajaxcart');
+$newsaleicon = Mage::getStoreConfig('mygeneral/product_list/newsaleicon');
+$displayaddtolink = Mage::getStoreConfig('mygeneral/product_list/display_comparewishlistlink');
+$display_productaddtocart = Mage::getStoreConfig('mygeneral/product_list/display_productaddtocart');
+$display_productname_singleline = Mage::getStoreConfig('mygeneral/product_list/display_productname_singleline');
+$_product = $this->getProduct();
+$page = $this->htmlEscape($_product->getPageLayout());
+    if ($page == '' || $page == "one_column") {
+	$page = 1;
+    }
+    elseif ($page == "two_columns_left" || $page == "two_columns_right") {
+	$page = 2;
+    }	
+    elseif($page == "three_columns") {
+	$page = 3;		
+    }
+    else {
+	$page = 0;
+    }
+?>
+<?php if($this->getItems()->getSize()): ?>
+    <div class="page-title section-title">
+	<h2><?php echo $this->__('Related Products') ?></h2>
+    </div>
+
+	<!--<p class="block-subtitle"><?php echo $this->__('Check items to add to the cart or') ?>&nbsp;<a href="#" onclick="selectAllRelated(this); return false;"><?php echo $this->__('select all') ?></a></p>-->
+       
+	<div id="block-related-slider" class="products-grid itemslider">
+	    
+        <?php $i=0;$j=0; foreach($this->getItems() as $_item): ?>
+	
+            <div class="item">
+                    
+                <div class="product-image-wrapper">
+			
+		    <?php if($newsaleicon == '1') { ?> 
+			<?php $adate = date('Y-m-d');  //echo 'frpm:-'.$_item->special_from_date.'----';echo "to:-".$_item->special_to_date.'--';
+				$a= 0;
+				if($_item->special_from_date != null && $_item->special_to_date == "")
+				{
+				    if( $adate >= $_item->special_from_date)
+				    {
+					    $a = 1; 
+				    }
+				}
+				if($_item->special_from_date != "" && $_item->special_to_date != "")
+				{
+				    if($adate >= $_item->special_from_date && $adate <= $_item->special_to_date)
+				    {
+				    $a = 1; 
+				    }
+				}
+				    
+				    if($a == 1){ ?>
+				   <div class="sale"><label><?php echo $this->__('PROMO') ?></label></div>
+				    <?php } ?>
+				
+				
+			      <?php $bdate = date('Y-m-d');
+				$b= 0;
+				if($_item->news_from_date != null && $_item->news_to_date == "")
+				{
+				    if( $bdate >= $_item->news_from_date)
+				    {
+					    $b = 1; 
+				    }
+				}
+				if($_item->news_from_date != "" && $_item->news_to_date != "")
+				{
+				    if($bdate >= $_item->news_from_date && $bdate <= $_item->news_to_date)
+				    {
+				    $b = 1; 
+				    }
+				}
+				    if($b == 1){ ?>
+				   <div class="new"><label><?php echo $this->__('NEW IN') ?></label></div>
+				    <?php } 
+				?>  
+		    <?php } ?>
+		    
+		    <?php
+			$class = "";
+			$alterImage = Mage::helper("ExtraConfig")->getAltImgHtml($_item, 280, 280,'thumbnail');
+			if($alterImage != false)
+			{
+				 $class = 'class="small-image"';
+			}
+		    ?>
+		    <a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_item, 'small_image'), null, true) ?>" class="product-image">
+			<img <?php echo $class;?> src="<?php echo $this->helper('catalog/image')->init($_item, 'small_image')->resize(280) ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_item, 'small_image'), null, true) ?>" />
+			<?php  echo $alterImage; ?>
+		    </a>		    		    
+		    
+		    <?php if(!$_item->isComposite() && $_item->isSaleable()): ?>
+			<?php if (!$_item->getRequiredOptions()): ?>
+			    <input type="checkbox" class="checkbox related-checkbox" id="related-checkbox<?php echo $_item->getId() ?>" name="related_products[]" value="<?php echo $_item->getId() ?>" />
+			<?php endif; ?>
+		    <?php endif; ?>		    
+		    
+		    <div class="quick-view">
+                        <?php if($ajaxcart == '2') { ?>
+                        <a href='<?php echo $this->getUrl('ajax/index/options',array('product_id'=>$_item->getId()));?>' class='fancybox' id='fancybox<?php echo $_item->getId()?>'><span><?php echo $this->__('Espiadinha') ?></span></a>
+                        <?php } ?>
+                    </div>
+	    
+		<div id='ajax_loader-rel<?php echo $_item->getId()?>' class="ajaxcartpro_progress" style="display: none;"></div>			    
+	
+		</div>
+		
+		
+		<?php if(Mage::helper("ExtraConfig")->hoverCssAvaibility('display_productname',0) != 'off'
+		    ||  Mage::helper("ExtraConfig")->hoverCssAvaibility('display_productprice',0) != 'off'
+		    ||	Mage::helper("ExtraConfig")->hoverCssAvaibility('display_productratings',0) != 'off'
+		    ||	Mage::helper("ExtraConfig")->hoverCssAvaibility('display_productaddtocart',0) != 'off'
+		    ||	Mage::helper("ExtraConfig")->hoverCssAvaibility('display_wishlistlink',0) != 'off'
+		    || 	Mage::helper("ExtraConfig")->hoverCssAvaibility('display_comparelink',0) != 'off'
+		):?>
+		    <div class="product-content-wrapper">
+			<div class="divider"></div>
+		<?php endif; ?>
+		
+		    
+		    <?php if(Mage::helper("ExtraConfig")->hoverCssAvaibility('display_productname',0) != 'off'):?>
+			<h3 class="product-name<?php if($display_productname_singleline == '1'){ ?> single-line-name<?php } ?> <?php echo Mage::helper("ExtraConfig")->hoverCssAvaibility('display_productname',0);?>"><a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->stripTags($_item->getName(), null, true) ?>"><?php echo $this->htmlEscape($_item->getName()); ?></a></h3>
+		    <?php endif; ?>
+		    
+		    <?php if(Mage::helper("ExtraConfig")->hoverCssAvaibility('display_productprice',0) != 'off') :?>
+			<div class="<?php echo Mage::helper("ExtraConfig")->hoverCssAvaibility('display_productprice',0);?>">
+			    <?php echo $this->getPriceHtml($_item, true) ?>			    
+			</div>
+		    <?php endif;?>
+		    
+		    
+		    <?php if(Mage::helper("ExtraConfig")->hoverCssAvaibility('display_productratings',0) != 'off') :?>
+			<div class="<?php echo Mage::helper("ExtraConfig")->hoverCssAvaibility('display_productratings',0);?>">
+			    <?php echo $this->getReviewsSummaryHtml($_item, 0, true); ?>			
+			</div>
+		    <?php endif;?>
+				
+					    
+		    
+		    <?php if(Mage::helper("ExtraConfig")->hoverCssAvaibility('display_productaddtocart',0) != 'off') { ?>
+		    <div class="btn-cart  <?php echo Mage::helper("ExtraConfig")->hoverCssAvaibility('display_productaddtocart',0);?>">
+			<?php if($_item->isSaleable()): ?>
+			    <?php if($ajaxcart == '1' || $ajaxcart == '2') { ?>
+				<?php if ( !($_item->getTypeInstance(true)->hasRequiredOptions($_item) || $_item->isGrouped()) ) { ?>
+				    <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart ajx-cart" onclick="setLocationAjax1('<?php echo $this->getAddToCartUrl($_item) ?>','<?php echo '-rel'.$_item->getId()?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+				<?php } else { ?>
+				    <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="showOptions('<?php echo $_item->getId()?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+				    <a href='<?php echo $this->getUrl('ajax/index/options',array('product_id'=>$_item->getId()));?>' class='fancybox' id='fancybox<?php echo $_item->getId()?>' style='display:none'></a>
+				<?php }  ?>			    
+			    <?php } else { ?>
+				<button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_item) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+			    <?php } ?>
+			<?php else: ?>
+			    <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+			<?php endif; ?>
+		    </div>
+		    <?php } ?>
+		    
+		    
+		    <?php if(Mage::helper("ExtraConfig")->hoverCssAvaibility('display_wishlistlink',0) != 'off' || Mage::helper("ExtraConfig")->hoverCssAvaibility('display_comparelink',0) != 'off') { ?>
+		        <ul class="add-to-links">
+		    <?php } ?>
+			<?php if(Mage::helper("ExtraConfig")->hoverCssAvaibility('display_wishlistlink',0) != 'off') { ?>
+			    <li class="first  <?php echo Mage::helper("ExtraConfig")->hoverCssAvaibility('display_wishlistlink',0);?>">
+				<?php if ($this->helper('wishlist')->isAllow()) : ?>
+				    <a href="<?php echo $this->helper('wishlist')->getAddUrl($_item) ?>" title="<?php echo $this->__('Add to Wishlist') ?>" class="link-wishlist"><span class="icon fa fa-heart-o"></span><?php echo $this->__('Add to Wishlist') ?></a>
+				<?php endif; ?>
+			    </li>
+			<?php } ?>
+			<?php if(Mage::helper("ExtraConfig")->hoverCssAvaibility('display_comparelink',0) != 'off') { ?>
+			    <li class="last  <?php echo Mage::helper("ExtraConfig")->hoverCssAvaibility('display_comparelink',0);?>">
+			    <?php if($_compareUrl=$this->getAddToCompareUrl($_item)): ?>
+				<a href="<?php echo $_compareUrl ?>" title="<?php echo $this->__('Add to Compare') ?>" class="link-compare"><span class="icon fa fa-copy"></span><?php echo $this->__('Add to Compare') ?></a>
+			    <?php endif; ?>
+			    </li>
+			<?php } ?>
+		    <?php if(Mage::helper("ExtraConfig")->hoverCssAvaibility('display_wishlistlink',0) != 'off' || Mage::helper("ExtraConfig")->hoverCssAvaibility('display_comparelink',0) != 'off') { ?>
+		        </ul>
+		    <?php } ?>
+
+	    	<?php if(Mage::helper("ExtraConfig")->hoverCssAvaibility('display_productname',0) != 'off'
+		    ||  Mage::helper("ExtraConfig")->hoverCssAvaibility('display_productprice',0) != 'off'
+		    ||	Mage::helper("ExtraConfig")->hoverCssAvaibility('display_productratings',0) != 'off'
+		    ||	Mage::helper("ExtraConfig")->hoverCssAvaibility('display_productaddtocart',0) != 'off'
+		    ||	Mage::helper("ExtraConfig")->hoverCssAvaibility('display_wishlistlink',0) != 'off'
+		    || 	Mage::helper("ExtraConfig")->hoverCssAvaibility('display_comparelink',0) != 'off'
+		):?>
+		    </div>
+		<?php endif; ?>
+		
+            </div>
+        
+	<?php endforeach ?>
+        </div>
+        <script type="text/javascript">decorateList('block-related', 'none-recursive')</script>
+<script type="text/javascript">
+    //<![CDATA[
+    $$('.related-checkbox').each(function(elem){
+        Event.observe(elem, 'click', addRelatedToProduct)
+    });
+
+    var relatedProductsCheckFlag = false;
+    function selectAllRelated(txt){
+        if (relatedProductsCheckFlag == false) {
+            $$('.related-checkbox').each(function(elem){
+                elem.checked = true;
+            });
+            relatedProductsCheckFlag = true;
+            txt.innerHTML="<?php echo $this->__('unselect all') ?>";
+        } else {
+            $$('.related-checkbox').each(function(elem){
+                elem.checked = false;
+            });
+            relatedProductsCheckFlag = false;
+            txt.innerHTML="<?php echo $this->__('select all') ?>";
+        }
+        addRelatedToProduct();
+    }
+
+    function addRelatedToProduct(){
+        var checkboxes = $$('.related-checkbox');
+        var values = [];
+        for(var i=0;i<checkboxes.length;i++){
+            if(checkboxes[i].checked) values.push(checkboxes[i].value);
+        }
+        if($('related-products-field')){
+            $('related-products-field').value = values.join(',');
+        }
+    }
+    //]]>
+</script>
+    
+
+<script>
+    j$(document).ready(function() {
+	j$("#block-related-slider").owlCarousel({
+	    itemsCustom : [
+	<?php if ($page == 1) : ?>
+	    [0, 1],
+	    [380, 2],
+	    [625, 3],
+	    [1265, 4],
+	    [1360, 4],
+	    [1440, 4],
+	    [1680, 4]
+	<?php elseif ($page == 2) : ?>
+	    [0, 1],
+	    [380, 2],
+	    [625, 3],
+	    [1265, 3],
+	    [1360, 3],
+	    [1440, 3],
+	    [1680, 3]
+	<?php elseif ($page == 3) : ?>
+	    [0, 1],
+	    [380, 2],
+	    [625, 3],
+	    [753, 2],
+	    [1265, 2],
+	    [1360, 2],
+	    [1440, 2],
+	    [1680, 2]
+	<?php endif; ?>	
+	    ]<?php echo Mage::helper("ExtraConfig")->sliderSetting(); ?>
+	});
+    });
+</script>
+
+<?php endif ?>

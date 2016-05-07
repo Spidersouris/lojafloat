@@ -1,0 +1,125 @@
+/*
+ * Internet Explorer: less than or equal 7
+ *
+ */
+
+/* Reset negative value of the top margin of old prices */
+.product-view .product-shop .price-box .old-price { margin-top:0; }
+
+/* Remove icon */
+button.btn-checkout span span .img-checkout { display:none; }
+
+/* Enforce floating for second level links block */
+#nav ul.level0 > li { float:left !important; }
+
+
+/* Header %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+.header { z-index:3000; position:relative; }
+
+.header .form-search .button { top:2px; right:0; }
+
+li.level0 > a > span > .cat-label {	top:-24px; right:5px; }
+
+
+/* Drop-down
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.dropdown-toggle * { display:block; float:left; }
+.dropdown-menu > li * { display:block; float:left; }
+
+/* Vertically aligned grid
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.v-grid-container .v-grid { float:left; display:block; }
+.v-grid-container .v-grid.clearer { clear:none; }
+.v-grid-container .user-menu { float:right; }
+.v-grid-container .header-top-search-wrapper { margin-top:25px; }
+
+
+/* Vertical links %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+.links > li {display: block;float: left;}
+
+/* BreadCrumbs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.breadcrumbs li{display: block;float: left;}
+
+/* Tabs  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+.gen-tabs .tabs li,
+.section-title .gen-tabs .tabs li{display: block;float: left;margin-right: 3px;}
+
+/* Product  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/*Product Content*/
+.products-grid .price-box p,
+.product-view .price-box p.special-price,
+.product-view .price-box p.old-price{display: block;float: left;}
+.products-list .price-box p.special-price,
+.products-list .price-box p.old-price{display: block;float: right;}
+
+.products-grid .ratings{clear: both;}
+
+.product-view .product-shop .add-to-links{display: block;float: left;}
+.product-options{clear: both;}
+
+/*icons*/
+a span.icon{cursor: pointer;}
+
+/* Quntity
+-------------------------------------------------------------- */
+.quantity_counter{width: 100px;}
+
+.quantity_counter *,
+.product-view .product-shop .add-to-cart *{display: block;float: left;}
+
+input.input-text{height: 20px;}
+select,
+input.input-text{line-height: 20px;}
+
+input.qty,
+.product-options dd input.input-text{height: 16px;line-height: 16px;}
+.quantity_counter input.qty{height: 12px;line-height: 12px;}
+
+/* Slider
+-------------------------------------------------------------- */
+
+/*Grabbing*/
+.grabbing{
+	width: auto;
+	height: auto;
+}
+
+/*Control*/
+.more-images.owl-theme .owl-controls .owl-buttons{z-index: 1000;}
+.banner .owl-theme .owl-controls .owl-buttons{position: absolute;top: 50%;left: 0;right: 0;}
+
+
+/* Custom Menu
+-------------------------------------------------------------- */
+html[xmlns] div.block1{clear: both;}
+html[xmlns] div.block2{clear: both;}
+.block1 .column{display: block;float: left;}
+
+html[xmlns] div.block2 > div{float: left;width: 100%;box-sizing: border-box;-ms-box-sizing: border-box;}
+
+
+/* Clearing %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* clearer: IE6/7 
+.clearer {
+	display:block; clear:both; height:auto; overflow:hidden;
+	font-size:12px; line-height:15px;
+}
+*/
+.header .clearer {}
+
+/*.cart .crosssell {
+	display:block; clear:both; height:auto; overflow:hidden;
+	font-size:12px; line-height:15px;
+}*/

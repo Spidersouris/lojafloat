@@ -1,0 +1,923 @@
+/*
+Do not change this file it lost your changes.
+*/
+
+<?php
+$instance = Mage::helper("ExtraConfig");
+$store = Mage::app()->getRequest()->getParam('store');
+$responsive = Mage::getStoreConfig('themelayout/layout/responsiveness',$store);
+$width = Mage::getStoreConfig('themelayout/layout/layout_width',$store);
+$customwidth = Mage::getStoreConfig('themelayout/layout/custom_width',$store);
+$fluidwidth = Mage::getStoreConfig('themelayout/layout/fluid_width',$store);
+$responsivewidth = $instance->responsivewidth();
+$maxwidth = $instance->maxwidth($store);
+$maxbreak = $instance->breakpoint($maxwidth, $store);
+?>
+
+<?php if($responsive){ ?>
+
+
+<?php if($maxbreak >= 1920) { ?>
+
+
+/* Desktop - design for a width of 1920px
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* 1920px <= width */
+
+@media only screen and (min-width: 1920px) {
+	
+	
+	/* Product page
+	-------------------------------------------------------------- */
+	.product-view .sticker { width:80px; height:80px; }
+	
+	/* Misc
+	-------------------------------------------------------------- */
+	/* Mini cart */
+	.after-mini-cart { clear:none; }
+	
+	/* Item grid
+	-------------------------------------------------------------- */
+	/* Item grid: 2 columns */
+	.itemgrid-adaptive.itemgrid-2col .item { width:18%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-2col .item:nth-child(5n+1) { clear:left !important; }
+	
+	/* Item grid: 3 columns */
+	.itemgrid-adaptive.itemgrid-3col .item { width:14.6666%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-3col .item:nth-child(6n+1) { clear:left !important; }
+	
+	/* Item grid: 4 columns */
+	.itemgrid-adaptive.itemgrid-4col .item { width:12.2857%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-4col .item:nth-child(7n+1) { clear:left !important; }
+	
+	/* Item grid: 5 columns */
+	.itemgrid-adaptive.itemgrid-5col .item { width:10.5%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-5col .item:nth-child(8n+1) { clear:left !important; }
+	
+	/* Item grid: 6 columns */
+	.itemgrid-adaptive.itemgrid-6col .item { width:10.5%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-6col .item:nth-child(8n+1) { clear:left !important; }
+	
+	/* Item grid: 7 columns */
+	.itemgrid-adaptive.itemgrid-7col .item { width:10.5%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-7col .item:nth-child(8n+1) { clear:left !important; }
+
+}
+
+<?php } ?>
+
+
+
+
+
+
+<?php if($maxbreak >= 1680) { ?>
+
+
+/* Desktop - design for a width of 1680px
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* 1680px <= width */
+
+@media only screen and (min-width: 1680px) <?php if($maxbreak > 1680){ ?>and (max-width: 1919px)<?php } ?>{
+	
+	
+	/* Product page
+	-------------------------------------------------------------- */
+	.product-view .sticker { width:80px; height:80px; }
+	
+	/* Misc
+	-------------------------------------------------------------- */
+	/* Mini cart */
+	.after-mini-cart { clear:none; }
+	
+	/* Item grid
+	-------------------------------------------------------------- */
+	/* Item grid: 2 columns */
+	.itemgrid-adaptive.itemgrid-2col .item { width:18%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-2col .item:nth-child(5n+1) { clear:left !important; }
+	
+	/* Item grid: 3 columns */
+	.itemgrid-adaptive.itemgrid-3col .item { width:14.6666%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-3col .item:nth-child(6n+1) { clear:left !important; }
+	
+	/* Item grid: 4 columns */
+	.itemgrid-adaptive.itemgrid-4col .item { width:12.2857%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-4col .item:nth-child(7n+1) { clear:left !important; }
+	
+	/* Item grid: 5 columns */
+	.itemgrid-adaptive.itemgrid-5col .item { width:10.5%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-5col .item:nth-child(8n+1) { clear:left !important; }
+	
+	/* Item grid: 6 columns */
+	.itemgrid-adaptive.itemgrid-6col .item { width:10.5%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-6col .item:nth-child(8n+1) { clear:left !important; }
+	
+	/* Item grid: 7 columns */
+	.itemgrid-adaptive.itemgrid-7col .item { width:10.5%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-7col .item:nth-child(8n+1) { clear:left !important; }
+	
+
+}
+
+<?php } ?>
+
+<?php if($maxbreak >= 1440) { ?>
+
+/* Desktop - design for a width of 1440px
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* 1440px <= width */
+
+@media only screen and (min-width: 1440px) <?php if($maxbreak > 1440){ ?>and (max-width: 1679px)<?php } ?> {
+	
+	
+	/* Product page
+	-------------------------------------------------------------- */
+	.product-view .sticker { width:80px; height:80px; }
+	
+	/* Misc
+	-------------------------------------------------------------- */
+	/* Mini cart */
+	.after-mini-cart { clear:none; }
+	
+	/* Item grid
+	-------------------------------------------------------------- */
+	/* Item grid: 2 columns */
+	.itemgrid-adaptive.itemgrid-2col .item { width:23%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-2col .item:nth-child(4n+1) { clear:left !important; }
+	
+	/* Item grid: 3 columns */
+	.itemgrid-adaptive.itemgrid-3col .item { width:18%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-3col .item:nth-child(5n+1) { clear:left !important; }
+	
+	/* Item grid: 4 columns */
+	.itemgrid-adaptive.itemgrid-4col .item { width:14.6666%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-4col .item:nth-child(6n+1) { clear:left !important; }
+	
+	/* Item grid: 5 columns */
+	.itemgrid-adaptive.itemgrid-5col .item { width:12.2857%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-5col .item:nth-child(7n+1) { clear:left !important; }
+	
+	/* Item grid: 6 columns */
+	.itemgrid-adaptive.itemgrid-6col .item { width:10.5%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-6col .item:nth-child(8n+1) { clear:left !important; }
+	
+	/* Item grid: 7 columns */
+	.itemgrid-adaptive.itemgrid-7col .item { width:10.5%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-7col .item:nth-child(8n+1) { clear:left !important; }
+	
+}
+<?php } ?>
+
+<?php if($maxbreak >= 1360) { ?>
+/* Desktop, wide laptop - design for a width of 1360px and 1366px
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* 1360px <= width */
+
+@media only screen and (min-width: 1360px) <?php if($maxbreak > 1360){ ?>and (max-width: 1439px)<?php } ?> {
+	
+	
+	/* Cart
+	-------------------------------------------------------------- */
+	.cart-table .product-image { max-width:110px; }
+	
+	/* Product page
+	-------------------------------------------------------------- */
+	.product-view .sticker { width:80px; height:80px; }
+	
+	/* Misc
+	-------------------------------------------------------------- */
+	/* Mini cart */
+	.after-mini-cart { clear:none; }
+	
+	/* Item grid
+	-------------------------------------------------------------- */
+	/* Item grid: 2 columns */
+	.itemgrid-adaptive.itemgrid-2col .item { width:31.3333%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-2col .item:nth-child(3n+1) { clear:left !important; }
+	
+	/* Item grid: 3 columns */
+	.itemgrid-adaptive.itemgrid-3col .item { width:23%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-3col .item:nth-child(4n+1) { clear:left !important; }
+	
+	/* Item grid: 4 columns */
+	.itemgrid-adaptive.itemgrid-4col .item { width:18%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-4col .item:nth-child(5n+1) { clear:left !important; }
+	
+	/* Item grid: 5 columns */
+	.itemgrid-adaptive.itemgrid-5col .item { width:14.6666%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-5col .item:nth-child(6n+1) { clear:left !important; }
+	
+	/* Item grid: 6 columns */
+	.itemgrid-adaptive.itemgrid-6col .item { width:12.2857%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-6col .item:nth-child(7n+1) { clear:left !important; }
+	
+	/* Item grid: 7 columns */
+	.itemgrid-adaptive.itemgrid-7col .item { width:10.5%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-7col .item:nth-child(8n+1) { clear:left !important; }
+
+}
+<?php } ?>
+
+<?php if($maxbreak >= 1280) { ?>
+
+/* Desktop, laptop - design for a width of 1280px
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* 1280px <= width */
+
+@media only screen and (min-width: 1280px) <?php if($maxbreak > 1280){ ?>and (max-width: 1359px)<?php } ?> {
+	
+	
+	/* Cart
+	-------------------------------------------------------------- */
+	.cart-table .product-image { max-width:110px; }
+	
+	/* Misc
+	-------------------------------------------------------------- */
+	/* Mini cart */
+	.after-mini-cart { clear:none; }
+	
+	/* Item grid
+	-------------------------------------------------------------- */
+	/* Item grid: 2 columns */
+	.itemgrid-adaptive.itemgrid-2col .item { width:31.3333%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-2col .item:nth-child(3n+1) { clear:left !important; }
+	
+	/* Item grid: 3 columns */
+	.itemgrid-adaptive.itemgrid-3col .item { width:23%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-3col .item:nth-child(4n+1) { clear:left !important; }
+	
+	/* Item grid: 4 columns */
+	.itemgrid-adaptive.itemgrid-4col .item { width:18%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-4col .item:nth-child(5n+1) { clear:left !important; }
+	
+	/* Item grid: 5 columns */
+	.itemgrid-adaptive.itemgrid-5col .item { width:14.6666%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-5col .item:nth-child(6n+1) { clear:left !important; }
+	
+	/* Item grid: 6 columns */
+	.itemgrid-adaptive.itemgrid-6col .item { width:12.2857%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-6col .item:nth-child(7n+1) { clear:left !important; }
+	
+	/* Item grid: 7 columns */
+	.itemgrid-adaptive.itemgrid-7col .item { width:10.5%; clear:none !important; }
+	.itemgrid-adaptive.itemgrid-7col .item:nth-child(8n+1) { clear:left !important; }
+
+}
+<?php } ?>
+
+/* Design for a width of 960-1280 px
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* 960px <= width < 1280px */
+@media only screen and (min-width: 960px) <?php if ($maxbreak > 960){ ?>and (max-width: 1279px)<?php } ?> {
+
+	/* Cart
+	-------------------------------------------------------------- */
+	.cart-table .product-image { max-width:80px; }
+        
+}
+
+
+/* Mobile, small old desktop - design for a width of less than 960px
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* width < 960px */
+@media only screen and (max-width: 959px) {
+
+	/* Data Table Thead Heading
+	-------------------------------------------------------------- */
+	/*.data-table thead th {font-size: inherit;font-weight: bold !important;}*/
+
+	/* Toolbar
+	-------------------------------------------------------------- */
+	
+	.my-account .pager .amount{display: none;}
+	
+	.sorter .sort-by,
+	.pager .limiter,
+	.sorter .limiter{margin-right: 10px;}
+        
+        /* Caption (Banner)
+        ------------------------------------------------------------- */
+        
+        .caption .heading{font-size: 3.5em;line-height: 1em;}
+        
+}
+
+
+
+/* Tablet (Portrait) - design for a width of 768px
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* 768px <= width < 960px */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	
+	/* Default Magento classes
+	-------------------------------------------------------------- */
+	.nobr { white-space:normal !important; }
+	
+	/* Cart
+	-------------------------------------------------------------- */
+	.cart-table .product-name { font-size:1em; font-family: inherit; }
+	.cart-table .product-image { max-width:80px; }
+
+}
+
+
+/* All desktop - design for a width of 768px and wider
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* 768px <= width */
+@media only screen and (min-width: 768px) {
+	
+
+	/* Mobile accordion
+	-------------------------------------------------------------- */
+	.mobile-collapsible .block-title { /*border-bottom:none;*/ }			/* Hide line when not on mobile */
+	.mobile-collapsible .opener { display:none !important; }			/* Always hide when not on mobile */
+	.mobile-collapsible .block-content { display:block !important; }	/* Always show when not on mobile */
+	.collapsible .block-content{display: none;}
+	
+}
+
+
+/* All mobile - design for a width of less than 768px
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* width < 768px */
+@media only screen and (max-width: 767px) {
+	
+	/* Grid and basic layout
+	-------------------------------------------------------------- */
+	
+		/* Margin for basic Magento columns */
+		.col-main,
+		.col-left,
+		.col-right
+		{
+			margin-bottom:30px;
+		}
+		
+		/* Product view:
+		   margin for all grid units */
+		.product-view .grid12-1,
+		.product-view .grid12-2,
+		.product-view .grid12-3,
+		.product-view .grid12-4,
+		.product-view .grid12-5,
+		.product-view .grid12-6,
+		.product-view .grid12-7,
+		.product-view .grid12-8,
+		.product-view .grid12-9,
+		.product-view .grid12-10,
+		.product-view .grid12-11,
+		
+		/* deprecated */
+		.product-view .grid4-1,
+		.product-view .grid4-2,
+		.product-view .grid4-3,
+		.product-view .grid2-1
+		/* end:deprecated */
+		{
+			margin-bottom:30px;
+		}
+
+		/* Remove additional margin for main sidebars */
+		.col-left > * { margin-right: 0; }
+		.col-right > * { margin-left: 0; }
+	
+	/* Magento utility classes
+	-------------------------------------------------------------- */
+	.nobr { white-space:normal !important; }
+	
+	/* Forms
+	-------------------------------------------------------------- */
+	.form-list .field,
+	.form-list input.input-text,
+	.form-list textarea,
+	.form-list select,
+	.form-list li.wide .input-box,
+	.form-list li.wide input.input-text,
+	.form-list li.wide textarea,
+	.form-list li.wide select { max-width:100%; width: 100%;}
+	
+	/* Tables
+	-------------------------------------------------------------- */
+	.data-table thead .nobr { white-space:normal !important; }
+	.data-table th,
+	.data-table td { padding:10px; }
+	
+	/* Data tables formatting
+	-------------------------------------------------------------- */
+	
+		/* Basic formatting */
+			.cart .data-table thead,
+			.my-wishlist .data-table thead,
+			.my-account .data-table thead,
+			.order-review .data-table thead,
+			.multiple-checkout .data-table thead{ display:none; }
+			
+			.cart .data-table tbody,
+			.my-wishlist .data-table tbody,
+			.my-account .data-table tbody,
+			.order-review .data-table tbody,
+			.multiple-checkout .data-table tbody{ background:transparent !important; }
+			
+			.cart .data-table tr,
+			.cart .data-table td,
+			.my-wishlist .data-table tr,
+			.my-wishlist .data-table td,
+			.my-account .data-table tr,
+			.my-account .data-table td,
+			.order-review .data-table tr,
+			.order-review .data-table td,
+			.multiple-checkout .data-table tr,
+			.multiple-checkout .data-table td{ border:none !important; background:transparent !important; display:block; width:100%; text-align:left !important; box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;-o-box-sizing: border-box;-moz-box-sizing: border-box;}
+			
+			.cart .data-table tr,
+			.my-wishlist .data-table tr,
+			.my-account .data-table tr,
+			.order-review .data-table tr,
+			.multiple-checkout .data-table tr{ border-bottom:1px solid #E4E4E4 !important; margin-bottom:20px; }
+			
+			.cart .data-table tfoot tr.last,
+			.my-wishlist .data-table tfoot tr.last,
+			.my-account .data-table tfoot tr.last,
+			.order-review .data-table tfoot tr.last,
+			.multiple-checkout .data-table tfoot tr.last{border-bottom: none !important;margin-bottom: 0px;}
+			
+			.cart .data-table tfoot tr.last{margin-bottom: 20px;}
+			
+			.data-table .product-name{display: inline;}
+			.order-items .price-excl-tax,
+			.multiple-checkout td .cart-price{display: inline-block;}
+			
+			.multiple-checkout .data-table td select{width: 100%;}
+			
+		/* Highlight first cell in table footer */
+			.my-account .data-table tfoot tr td:first-child,
+			.order-review .data-table tfoot tr td:first-child,
+			.multiple-checkout .data-table tfoot tr td:first-child{ font-weight:bold; }
+	
+		/* Show cell label */
+			.data-table .cartlabel {
+				display:inline-block;
+				width:30%;
+				min-width:100px;
+				max-width:140px;
+				margin-right:10px;
+				font-weight:bold;
+                                text-transform: uppercase;
+                                vertical-align: top;
+			}
+	/* Header
+	-------------------------------------------------------------- */
+
+                /* Global notices */
+                .global-site-notice .notice-inner { background:none; padding:10px 0; text-align:center; }
+                .global-site-notice .notice-inner p { width:100%; padding:0 0 10px; }
+                .global-site-notice .notice-inner .actions { padding-bottom:5px; }			
+                        
+                /* Logo
+                -------------------------------------------------------------- */
+                .logo,
+                .header2 .logo{ width:70%; margin-left:auto; margin-right:auto; margin-top:auto !important; text-align:center;}
+                
+        
+                /* Quick search
+                -------------------------------------------------------------- */
+
+                /* Search: mobile (search bar layout for narrow screens)
+                -------------------------------------------------------------- */
+                .search-wrapper-mobile {
+                        display: block; /* To override possible inline styles */
+                        clear: both;
+                        width: 100%;
+                        margin: 10px 0;
+                        /*float: none;*/
+                }
+                .search-wrapper-mobile .form-search {
+                        width: 100%;
+                        /*max-width: 440px;*/
+                        margin-left: auto;
+                        margin-right: auto;
+                        float:none;
+                }
+                .search-wrapper-mobile .form-search .input-text {
+                        width: 100%;
+                        min-width: 100%; /* Cancel minimum width */
+                }
+        
+		/* Other
+		-------------------------------------------------------------- */
+		
+		/* Header Top */
+		.header-top,
+		.top-links,
+		.block_header_top{ text-align: center !important;}
+                
+                .top-links.header2{}
+		
+		/*Header Primary*/
+		.header-primary .v-grid{margin-top: 10px;margin-bottom: 10px;float: left;}
+
+	
+	/* Category view
+	-------------------------------------------------------------- */
+	.products-list .product-shop,
+	.products-list .right-column,
+	.products-list .product-image-wrapper { width:98% !important; margin-left:1% !important; margin-right:1% !important; }        
+        
+	/* Footer
+	-------------------------------------------------------------- */
+
+		/* Footer elements - align center */
+		
+			/* Footer elements */
+
+	
+	/* Toolbar
+	-------------------------------------------------------------- */
+	
+		/* All elements - align center and increase vertical spacing */
+		.pager,
+		.sorter,
+                .my-account .pager{ text-align:center; }
+		.pager .limiter,
+		.pager .pages,
+		.sorter .amount,
+		.sorter .limiter,
+		.sorter .view-mode,
+		.sorter .sort-by { display:inline-block;float: none;vertical-align: middle;}
+
+		.sorter .per-page,
+		.pager .per-page { display:none; }
+
+	/* Category view
+	-------------------------------------------------------------- */
+	
+		.note-msg.empty-catalog {
+			background-position:center 10px !important;
+			color:inherit;
+			padding:150px 10px 10px !important;
+			text-align:center;
+		}
+
+		/* Page heading with RSS link */
+		.page-title { position:relative; }
+		.page-title .link-rss { float:none; display:block; position:static; margin:10px 0 0; }
+
+
+	/* Products grid: override size of elements (values like size-s)
+	-------------------------------------------------------------- */
+	/* Product name */
+	.products-grid .product-name {
+		font-size:1.1666em; /*14px*/
+		line-height:1.2307em; /*16px*/
+	}
+
+	
+	/* Cart
+	-------------------------------------------------------------- */
+	
+		/* Buttons below table: align center */
+		.cart-table tfoot tr.first td,
+		.my-wishlist .buttons-set{ text-align:center !important; padding:0;}
+		.cart-table tfoot button,
+		.my-wishlist .buttons-set button.button{ display:inline-block; float:none !important; margin:0 0 3px; padding:0; }
+		
+        /* Products Page
+	-------------------------------------------------------------- */
+	
+		/* Wrapper for collaterals - remove top margin (grid units already have bottom margin) 
+		.product-view .box-additional { margin-top:0; }	*/
+	
+	/* Slideshow
+	-------------------------------------------------------------- */ 
+	   
+	/* Slideshow navigation: move buttons to the top right corner */
+	.banner .owl-theme .owl-controls .owl-buttons .owl-prev { top: 10px;right: 45px;left: auto;width: 30px;height: 30px;line-height: 30px;font-size: 1.5em;}
+	.banner .owl-theme .owl-controls .owl-buttons .owl-next { top: 10px;right: 10px;left: auto;width: 30px;height: 30px;line-height: 30px;font-size: 1.5em;}
+
+	/* Pagination */
+	.banner .caption-container { display: none; }
+	
+	
+	/* Mobile accordion
+	-------------------------------------------------------------- */
+	.mobile-collapsible .block-content { display:none; } /* Hide on mobile */
+	.collapsible .block-content{display: none;} /* Hide on mobile */
+	.mobile-collapsible { position:relative; } /* Always make "relative" when not on mobile (to avoid flickering on CSS transitions) */	
+
+}
+/* end: width < 768px */
+
+
+/* Mobile (Landscape) - design for a width of 480px
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* 480px <= width < 768px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+
+	/* Toolbar
+	-------------------------------------------------------------- */
+	
+	.limiter label + .dropdown + label{display: none;}
+
+
+	/* Shrink and align center the main image */
+	.img-box { width:60.4651%; /*364px*/ }	
+	
+	
+
+}
+/* end: 480px <= width < 768px */
+
+
+/* Design for a width of 640px
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* 640px <= width < 768px */
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+
+	/* Item grid
+	-------------------------------------------------------------- */
+	
+.itemgrid.itemgrid-adaptive .item { width:31.3333%; clear:none !important; }
+.itemgrid.itemgrid-adaptive .item:nth-child(3n+1) { clear:left !important; }
+
+}
+/* end: 640px <= width < 768px */
+
+
+/* Design for a width of less than 640px
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* width < 640px */
+@media only screen and (max-width: 639px) {
+
+	h1 { font-size:2em;			line-height:1.25em;		/*24px, 30px*/ }
+	h2 { font-size:1.6666em;	line-height:1.2em;		/*20px, 24px*/ }
+	h3 { font-size:1.3333em;	line-height:1.25em;		/*16px, 20px*/ }
+	h4 { font-size:1.1666em;	line-height:1.1428em;	/*14px, 16px*/ }
+	h5 { font-size:1em;			line-height:1em;		/*12px, 12px*/ }
+	h6 { font-size:1em;			line-height:1em;		/*12px, 12px*/ }
+	
+        /* Home Page Product Tabs
+        -------------------------------------------------------------------*/
+        .product-tabs .gen-tabs li{font-size: 2em;line-height: 20px;}
+        .product-tabs .gen-tabs li .icon{font-size: 20px;line-height: 32px;}        
+}
+/* end: width < 640px */
+
+
+/* Design for a width of 480px
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* 480 <= width < 640px */
+@media only screen and (min-width: 480px) and (max-width: 639px) {
+
+	/* Item grid
+	-------------------------------------------------------------- */
+	
+.itemgrid.itemgrid-adaptive .item { width:48%; clear:none !important; }
+.itemgrid.itemgrid-adaptive .item:nth-child(2n+1) { clear:left !important; }
+}
+/* end: 480 <= width < 640px */
+
+
+/* Design for a width of less than 480px (small mobile)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* width < 480px */
+@media only screen and (max-width: 479px) {
+
+			
+	/* Products grid
+	-------------------------------------------------------------- */
+        
+            /* Disable hover effect
+            -------------------------------------------------------------- */        
+        
+            /* Show elements normally displayed only on hover */
+            .category-products-grid .item .display-onhover {display: block !important;}
+            
+            /**/
+            .products-grid .item:hover .product-image .small-image,
+            .products-list .item:hover .product-image .small-image{display: inline-block;}
+            
+            .products-grid .item:hover .product-image .thumbnail,
+            .products-list .item:hover .product-image .thumbnail{display: none;}
+            
+            /*Remove add hover bottom margin (Use display on hover elements)*/
+            .category-products-grid .item{margin-bottom:0px !important;}
+            
+            /*Quick view remove displayed on product image*/
+            .products-grid .item .quick-view { display: none !important; }
+            
+            /*Remove on hover box shadow & border*/
+            .products-grid .item:hover,
+            .products-list .item:hover {
+                box-shadow: none;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                -ms-box-shadow: none;
+                -o-box-shadow: none;
+                
+                border-color: transparent;
+            }
+            
+            /*Increes Sale & New label Size*/
+            .sale, .new{width: 35px;height: 35px;line-height: 35px;font-size: 11px;}
+        
+        
+        /* Ajex Cart Popup (Remove Ajex Popup Product Image For Small Device)
+        -------------------------------------------------------------- */
+        div.alert-inner{display: inherit;bottom: auto;box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-o-box-sizing: border-box;-ms-box-sizing: border-box;margin-top: -112px;z-index: 10010;}
+        div.alert-inner .product-image{display: none;}
+        div.alert-inner p{padding-left: 0px;}
+        div.alert-inner li.success-msg{margin-left: 0px;}
+        div.alert-inner a{float: none !important;cursor: pointer;margin: 5px 5px;display: inline-block;vertical-align: top;}        
+        
+        /* Home Page Product Tabs
+        -------------------------------------------------------------------*/
+        .product-tabs .gen-tabs li{padding: 0 5px !important;border: none;margin: 0px !important}
+		
+	/* Grid elements
+	-------------------------------------------------------------- */
+	.col2-set .col-1,
+	.col2-set .col-2 { width:100%; margin-bottom: 20px;}
+	
+	/* Header
+	-------------------------------------------------------------- */
+	
+		/* Header elements - align center
+		-------------------------------------------------------------- */
+
+		.header-primary{text-align: center;}
+		
+		.header .mobile-inline-container { text-align:center; }
+		.header .mobile-inline-container > * { float:none; display:inline-block; margin-left:5px; margin-right:5px; }
+		
+                /*Toplinks*/
+                .top-links.header2{clear: both;float: none;width: 100%;margin-left: 0px;}
+                
+		/* Inside user menu */
+		.header-container .dropdown { float:none !important; display:inline-block !important; }
+                .nav-maincontainer .shopping_cart{display: none !important;}
+
+	
+	/* Products list
+	-------------------------------------------------------------- */
+	
+	.products-list .product-image { margin-bottom:20px; }
+
+	
+	/* Product page
+	-------------------------------------------------------------- */
+	
+		/* Reviews */
+		.product-view .form-add .data-table th{font-size: inherit;font-weight: bold;}
+		.product-view .form-add .data-table th,
+		.product-view .form-add .data-table td { padding:6px 1px; }
+		.product-view .form-add .form-list input.input-text,
+		.product-view .form-add .form-list textarea { width:90%; }
+
+		/* Add-to links */
+		.product-view .add-to-links { text-align: inherit; }
+	
+	/* Toolbar
+	-------------------------------------------------------------- */
+        
+		.sorter .sort-by,
+		.pager .limiter{ background:none; margin-right:0; float: none;margin-left:0; padding-right:0; padding-left:0; } /* Remove right divider */
+		
+		
+		
+		/* Pages */
+		.pager .amount, .sorter .amount{display: none;}
+		.pager .pages{float: none;clear: both;width: 100%;}
+	
+	/* Account
+	-------------------------------------------------------------- */
+	
+		/* Account info + Order info */
+			/*
+			.box-account.box-info .col-1,
+			.order-info-box .col-1 { border-right:none; }
+			.box-account.box-info .col-1 .box,
+			.order-info-box .col-1 .box { padding-right:0; }
+			*/
+			
+			.my-account .col2-set .col-1 { border-right:none; margin-bottom:20px; }
+			.my-account .col2-set .col-1 .box { padding-right:0; }
+		
+		/* Order details */
+			.order-items .sub-title .separator { display:none; }
+			
+		/* Product Review Detail*/
+			.product-review .product-img-box{width: auto;float: none;}
+			.product-review .product-details{margin: 0 0px 20px 0px;}
+
+
+	/* Checkout
+	-------------------------------------------------------------- */
+	.opc .step-title h2 { font-size:1.3em;text-align: left;}
+        .opc .step-title .number{font-size:1.3em;}
+	
+}
+/* end: width < 480px */
+
+
+/* Design for a width of 320px (mobile - portrait)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* 320px <= width < 480px */
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+	
+	/* Item grid
+	-------------------------------------------------------------- */
+	
+.itemgrid.itemgrid-adaptive .item { width:48%; clear:none !important; }
+.itemgrid.itemgrid-adaptive .item:nth-child(2n+1) { clear:left !important; }
+
+	
+	
+}
+/* end: 320px <= width < 480px */
+
+
+/* Design for a width of less than 320px
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* width < 320px */
+@media only screen and (max-width: 319px) {
+
+        
+	/* Item grid
+	-------------------------------------------------------------- */
+	/* Always show 1 column */
+	/* Important: added ".itemgrid" class to override other styles */
+	.itemgrid.itemgrid-adaptive .item { width:98%; clear:none !important; }
+        
+        /* Slideshow
+	-------------------------------------------------------------- */
+
+	.banner .owl-pagination { display:none; } /* Deprecated */	        
+
+}
+/* end: width < 320px */
+
+
+/* Design for a width of 240px (small mobile)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* 240px <= width < 320px */
+@media only screen and (min-width: 240px) and (max-width: 319px) {
+
+
+}
+/* end: 240px <= width < 320px */
+
+
+/* Design for a width of lass than 240px
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* width < 240px */
+@media only screen and (max-width: 239px) {
+
+
+}
+/* end: width < 240px */
+
+
+
+/*Additional custom CSS*/
+
+
+<?php } ?>

@@ -1,0 +1,18 @@
+<?php
+    $_helper    = $this->helper('catalog/output');
+    $_category  = $this->getCurrentCategory();
+?>
+<?php $categoryblock = $_category->getData('custom_block_position'); ?>
+<?php if($categoryblock == 'top-sidebar'){ ?>
+    <?php if($this->isMixedMode()): ?>
+        <div class="full-width-block">
+            <?php echo $this->getCmsBlockHtml() ?>
+        </div>
+    <?php endif; ?>
+<?php } elseif($categoryblock == 'top-sidebar-full') { ?>
+    <?php if($this->isMixedMode()): ?>
+        <div class="full-width-block full">
+            <?php echo $this->getCmsBlockHtml() ?>
+        </div>
+    <?php endif; ?>
+<?php } ?>

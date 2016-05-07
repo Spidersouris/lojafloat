@@ -1,0 +1,353 @@
+<root>
+  <cms_static_block>
+
+    <block>
+      <title>Footer Block</title>
+      <identifier>footer-block</identifier>
+      <status>1</status>
+      <content>
+        <![CDATA[
+        <div class="clearer martop20">&nbsp;</div>
+        <div class="footer-topcontainer">
+        <div class="footer-top">
+        <div class="logo"><img src="{{media url="wysiwyg/block_banner/logo-footer.png"}}" alt="" /></div>
+        </div>
+        </div>
+        <div class="footer-primary-container">
+        <div class="footer-primary container">
+        <div class="grid12-3">
+        <div class="collapsible mobile-collapsible"><span class="opener">&nbsp;</span>
+        <h6 class="block-title">CONNECT WITH US</h6>
+        <div class="block-content">
+        <p class="heading" style="font-weight: bold; margin-bottom: 15px;">Modelo - eCommerce</p>
+        <p style="line-height: 1.8em;">4 East 80th Street, New York, NY <br /> +88 897 654 321 <br /> <a href="#1">say@hello.com</a></p>
+        <div class="social-link martop25 icon-wrapper-round "><a title="Facebook" href="#"> <span class="icon fa fa-facebook">&nbsp;</span> </a><a title="Twitter" href="#"> <span class="icon  fa fa-twitter">&nbsp;</span> </a> <a title="Google Plus" href="#"> <span class="icon fa fa-google-plus">&nbsp;</span> </a> <a title="Rss Feed" href="#"> <span class="icon  fa fa-rss">&nbsp;</span> </a> <a title="Pinterest" href="#"> <span class="icon fa fa-pinterest">&nbsp;</span> </a> <a title="Instagram" href="#"> <span class="icon fa fa-instagram">&nbsp;</span> </a> <a title="Linkedin" href="#"> <span class="icon fa fa-linkedin">&nbsp;</span> </a> <a title="Vimeo" href="#"> <span class="icon fa fa-vimeo-square">&nbsp;</span> </a> <a title="Youtube Play" href="#"> <span class="icon fa fa-youtube-play">&nbsp;</span> </a> <a title="Flickr" href="#"> <span class="icon fa fa-flickr">&nbsp;</span> </a> <a title="Envelope" href="#"> <span class="icon fa fa-envelope-o">&nbsp;</span> </a></div>
+        </div>
+        </div>
+        </div>
+        <div class="grid12-3">
+        <div class="collapsible mobile-collapsible"><span class="opener">&nbsp;</span>
+        <h6 class="block-title">HOLIDAY SALES</h6>
+        <div class="block-content">
+        <div class="feature feature-wrapper "><span class="icon auto-size"><img src="{{media url="wysiwyg/block_banner/feture-list-block-img1.jpg"}}" alt="" /></span> <a class="below-heading" href="#">CHANEL - FASHION BAG</a>
+        <p class="martop5">$189.00</p>
+        </div>
+        <div class="feature feature-wrapper"><span class="icon auto-size"><img src="{{media url="wysiwyg/block_banner/feture-list-block-img2.jpg"}}" alt="" /></span> <a class="below-heading" href="#">CALVIN KLEIN - SLIM PANTS</a>
+        <div class="martop5">
+        <p class="old-price left"><span class="price-label">Regular Price:</span> <span id="old-price-130" class="price"> $24.00 </span></p>
+        <p class="special-price"><span id="product-price-130" class="price"> $20.00 </span></p>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="grid12-3">
+        <div class="collapsible mobile-collapsible"><span class="opener">&nbsp;</span>
+        <h6 class="block-title">NEW ARRIVALS</h6>
+        <div class="block-content">
+        <div class="feature feature-wrapper"><span class="icon auto-size"><img src="{{media url="wysiwyg/block_banner/feture-list-block-img3.jpg"}}" alt="" /></span> <a class="below-heading" href="#">CALVIN KLEIN - LOW SLIM JEANS</a>
+        <div class="martop5">
+        <p class="old-price left"><span class="price-label">Regular Price:</span> <span id="old-price-130" class="price"> $24.00 </span></p>
+        <p class="special-price"><span id="product-price-130" class="price"> $20.00 </span></p>
+        </div>
+        </div>
+        <div class="feature feature-wrapper"><span class="icon auto-size"><img src="{{media url="wysiwyg/block_banner/feture-list-block-img4.jpg"}}" alt="" /></span> <a class="below-heading" href="#">MC NEAL - GUMMI SWEATER</a>
+        <div class="martop5">
+        <p class="old-price left"><span class="price-label">Regular Price:</span> <span id="old-price-130" class="price"> $24.00 </span></p>
+        <p class="special-price"><span id="product-price-130" class="price"> $20.00 </span></p>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="grid12-3">
+        <div class="collapsible mobile-collapsible"><span class="opener">&nbsp;</span>
+        <h6 class="block-title">OUR SUPPORT</h6>
+        <div class="block-content">
+        <ul class="list">
+        <li class="first"><a title="-Terms &amp; Conditions" href="#">- Terms &amp; Conditions</a></li>
+        <li><a title=" Delivery" href="#">- Delivery</a></li>
+        <li><a title=" Secure Payment" href="#">- Secure Payment</a></li>
+        <li><a title=" Contact Us" href="#">- Contact Us</a></li>
+        <li><a title=" Refunds" href="#">- Refunds</a></li>
+        <li><a title=" Track Orders" href="#">- Track Orders</a></li>
+        <li class="last"><a title=" Services" href="#">- Services</a></li>
+        </ul>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        ]]>
+      </content>      
+    </block>
+    
+    <block>
+      <title>Detail Right Block</title>
+      <identifier>detail-right-block</identifier>
+      <status>1</status>
+      <content>
+        <![CDATA[
+          <div class="center-block">
+          <div class="marbot20"><img src="{{media url="wysiwyg/block_banner/blocksidebar1.jpg"}}" alt="" /></div>
+          </div>
+          <div class="center-block no-margin"><img src="{{media url="wysiwyg/block_banner/blocksidebar2.jpg"}}" alt="" /></div>
+        ]]>
+      </content>      
+    </block>
+    
+    <block>
+      <title>wp_custom_menu_3</title>
+      <identifier>wp_custom_menu_3</identifier>
+      <status>1</status>
+      <content>
+        <![CDATA[
+          <div class="cats-holder">
+          <ul class="links">
+          <li class="cat-item"><a href="#"> <img src="{{media url="wysiwyg/block_banner/menu-cat-icon/cat-icon-01.jpg"}}" alt="" /> <span>jackets</span> </a></li>
+          <li class="cat-item"><a href="#"> <img src="{{media url="wysiwyg/block_banner/menu-cat-icon/cat-icon-02.jpg"}}" alt="" /> <span>t-shirts</span> </a></li>
+          <li class="cat-item"><a href="#"> <img src="{{media url="wysiwyg/block_banner/menu-cat-icon/cat-icon-03.jpg"}}" alt="" /> <span>skirts</span> </a></li>
+          <li class="cat-item"><a href="#"> <img src="{{media url="wysiwyg/block_banner/menu-cat-icon/cat-icon-04.jpg"}}" alt="" /> <span>pants</span> </a></li>
+          <li class="cat-item"><a href="#"> <img src="{{media url="wysiwyg/block_banner/menu-cat-icon/cat-icon-05.jpg"}}" alt="" /> <span>shoes</span> </a></li>
+          <li class="cat-item"><a href="#"> <img src="{{media url="wysiwyg/block_banner/menu-cat-icon/cat-icon-06.jpg"}}" alt="" /> <span>accessories</span> </a></li>
+          </ul>
+          </div>
+          <div class="grid-container" style="display: none;">
+          <div class="grid12-6 banner no-left-gutter"><img src="{{media url="wysiwyg/block_banner/block1.jpg"}}" alt="" /></div>
+          <div class="grid12-6 banner no-right-gutter"><img src="{{media url="wysiwyg/block_banner/block2.jpg"}}" alt="" /></div>
+          </div>
+        ]]>
+      </content>      
+    </block>
+    
+    <block>
+      <title>Detail Bottom Block</title>
+      <identifier>detail-bottom-block</identifier>
+      <status>1</status>
+      <content>
+        <![CDATA[
+          <div class="grid-container page-banners">
+          <div class="grid12-6 banner no-left-gutter"><img src="{{media url="wysiwyg/block_banner/block1.jpg"}}" alt="" /></div>
+          <div class="grid12-6 banner no-right-gutter"><img src="{{media url="wysiwyg/block_banner/block2.jpg"}}" alt="" /></div>
+          </div>
+        ]]>
+      </content>      
+    </block>
+    
+    <block>
+      <title>Women Block</title>
+      <identifier>women-block</identifier>
+      <status>1</status>
+      <content>
+        <![CDATA[
+          <div class="category-block-section">
+          <div class="center-block"><img src="{{media url="wysiwyg/block_banner/category_banner/categorybanner-women.jpg"}}" alt="Women" /></div>
+          </div>
+        ]]>
+      </content>      
+    </block>
+    
+    <block>
+      <title>Footer Payment</title>
+      <identifier>footer-payment</identifier>
+      <status>1</status>
+      <content>
+        <![CDATA[
+          <div class="footer-payment-icons">
+          <ul class="payment-icon a-center">
+          <li><img src="{{media url="wysiwyg/block_banner/payment/payments-paypal.png"}}" alt="" /></li>
+          <li><img src="{{media url="wysiwyg/block_banner/payment/payments-visa.png"}}" alt="" /></li>
+          <li><img src="{{media url="wysiwyg/block_banner/payment/payments-mastercard.png"}}" alt="" /></li>
+          <li><img src="{{media url="wysiwyg/block_banner/payment/payments-discover.png"}}" alt="" /></li>
+          <li><img src="{{media url="wysiwyg/block_banner/payment/payments-skrill.png"}}" alt="" /></li>
+          </ul>
+          </div>
+        ]]>
+      </content>      
+    </block>
+    
+    <block>
+      <title>Block Header Top1</title>
+      <identifier>block-header-top1</identifier>
+      <status>1</status>
+      <content>
+        <![CDATA[
+          <div class="block_header_top hide-below-768"><span class="call-us">HOTLINE : <strong style="font-size: 18px;">(123) 456-7890</strong> </span></div>
+        ]]>
+      </content>      
+    </block>
+    
+    <block>
+      <title>Before Main Container Full Width Block</title>
+      <identifier>before-maincontainer-full-width-block</identifier>
+      <status>1</status>
+      <content>
+        <![CDATA[
+          <div class="clearer" style="margin-top: 2%;">&nbsp;</div>
+          <div class="container">
+          <div class="grid-container page-banners">
+          <div class="grid12-6 banner"><img src="{{media url="wysiwyg/block_banner/block1.jpg"}}" alt="" /></div>
+          <div class="grid12-6 banner"><img src="{{media url="wysiwyg/block_banner/block2.jpg"}}" alt="" /></div>
+          </div>
+          </div>
+        ]]>
+      </content>      
+    </block>
+    
+    <block>
+      <title>Brand Slider</title>
+      <identifier>brand-slider</identifier>
+      <status>1</status>
+      <content>
+        <![CDATA[
+          <div class="clearer martop30">&nbsp;</div>
+          <div class="brand-full" style="background-color: #ffffff; padding: 50px 0px 40px;">
+          <div class="container">
+          <div class="grid-full">{{block type="catalog/product_manufacturer" template="catalog/product/brand.phtml"}}</div>
+          </div>
+          </div>
+        ]]>
+      </content>      
+    </block>
+       
+    <block>
+      <title>Custom Right Sidebar Block1</title>
+      <identifier>custom-right-sidebar-block1</identifier>
+      <status>1</status>
+      <content>
+        <![CDATA[
+          <div class="block">
+          <div class="block-title"><strong><span>Custom Block</span></strong></div>
+          <div class="block-content">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+          </div>
+          </div>
+        ]]>
+      </content>      
+    </block>
+    
+    <block>
+      <title>Custom Right Sidebar Block2</title>
+      <identifier>custom-right-sidebar-block2</identifier>
+      <status>1</status>
+      <content>
+        <![CDATA[
+          <div class="block center-block"><img src="{{media url="wysiwyg/block_banner/blocksidebar1.jpg"}}" alt="" /></div>
+        ]]>
+      </content>      
+    </block>
+    
+    <block>
+      <title>Custom Left Sidebar Block1</title>
+      <identifier>custom-left-sidebar-block1</identifier>
+      <status>1</status>
+      <content>
+        <![CDATA[
+          <div class="block">
+          <div class="block-title"><strong><span>Custom Block</span></strong></div>
+          <div class="block-content">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+          </div>
+          </div>
+        ]]>
+      </content>      
+    </block>
+        
+    <block>
+      <title>Custom Left Sidebar Block2</title>
+      <identifier>custom-left-sidebar-block2</identifier>
+      <status>1</status>
+      <content>
+        <![CDATA[
+          <div class="block center-block"><img src="{{media url="wysiwyg/block_banner/blocksidebar2.jpg"}}" alt="" /></div>
+        ]]>
+      </content>      
+    </block>
+    
+    <block>
+      <title>Custom Tab1</title>
+      <identifier>block_product_tab1</identifier>
+      <status>1</status>
+      <content>
+        <![CDATA[
+          <div class="std">Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit.</div>
+        ]]>
+      </content>      
+    </block>
+    
+    <block>
+      <title>Custom Tab2</title>
+      <identifier>block_product_tab2</identifier>
+      <status>1</status>
+      <content>
+        <![CDATA[
+          <div class="std">Nam elit agna, endrerit sit amet, tincidunt ac, viverra sed, nulla. Donec porta diam eu massa. Quisque diam lorem. Interdum vitae, dapibus ac, scelerisque.</div>
+        ]]>
+      </content>      
+    </block>
+        
+    <block>
+      <title>wp_custom_menu_56</title>
+      <identifier>wp_custom_menu_56</identifier>
+      <status>1</status>
+      <content>
+        <![CDATA[
+          <div class="grid-container martop20">
+          <div class="feature feature-wrapper no-margin"><span class="icon auto-size"><img src="{{media url="wysiwyg/block_banner/blocksidebar3.jpg"}}" alt="" /></span>
+          <h3 class="below-heading">GREAT SUPPORT &amp; FREE UPDATES</h3>
+          <p class="content">Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus.Vestibulum libero nisl.</p>
+          <a class="go" href="#">BUY THEME</a></div>
+          </div>
+        ]]>
+      </content>      
+    </block>
+    
+    <block>
+      <title>After Main Container Full Width Block</title>
+      <identifier>after-maincontainer-full-width-block</identifier>
+      <status>1</status>
+      <content>
+        <![CDATA[
+          <div class="clearer martop30">&nbsp;</div>
+          <div class="blocksubcribe-full" style="background-color: #ffffff; padding: 50px 0px;">
+          <div class="container">
+          <div class="grid-full">{{block type="newsletter/subscribe" name="left.newsletter" template="newsletter/subscribe.phtml"}}</div>
+          </div>
+          </div>
+          <div class="clearer martop50">&nbsp;</div>
+          <div class="container">
+          <div class="grid-container page-banners">
+          <div class="grid12-6 banner"><img src="{{media url="wysiwyg/block_banner/block3.jpg"}}" alt="" /></div>
+          <div class="grid12-6 banner"><img src="{{media url="wysiwyg/block_banner/block4.jpg"}}" alt="" /></div>
+          </div>
+          </div>
+          <div class="clearer martop30">&nbsp;</div>
+          <div class="container">
+          <div class="grid-full">{{block type="blog/last" template="aw_blog/widget_post.phtml"}}</div>
+          </div>
+        ]]>
+      </content>      
+    </block>
+    
+    <block>
+      <title>wp_custom_menu_4</title>
+      <identifier>wp_custom_menu_4</identifier>
+      <status>1</status>
+      <content>
+        <![CDATA[
+          <div class="show-separators" style="font-size: 14px;">
+          <ul class="links">
+          <li class="label">Featured Categories:</li>
+          <li class="first"><a href="#">Evening Tops</a></li>
+          <li><a href="#">Dresses</a></li>
+          <li class="last"><a href="#">Shirts &amp; Blouses</a></li>
+          </ul>
+          </div>
+        ]]>
+      </content>      
+    </block>
+    
+  </cms_static_block>
+</root>
+
+

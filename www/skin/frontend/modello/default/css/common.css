@@ -1,0 +1,292 @@
+
+/*
+ *Common Style
+ */
+
+/* Page Heading
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+.page-title { margin-bottom:20px; }
+.page-title h1,
+.page-title h2 {margin-bottom: 0;text-transform: uppercase;font-size: 2.5em;line-height: 1.25em;font-weight: 300;}
+/*.category-title { margin-bottom:10px; }*/
+
+/* Links in page title */
+.page-title .separator { margin:0 3px; }
+.page-title .separator,
+.page-title .link-reorder,
+.page-title .link-rss,
+.page-title .link-print { font-weight:normal; display:inline-block; margin-top:10px; }
+.page-title .link-rss { float:right; margin-top:15px; }
+
+/* Title with buttons */
+.title-buttons { text-align:right; }
+.title-buttons button { margin-left:1em; }
+.title-buttons h1,
+.title-buttons h2,
+.title-buttons h3,
+.title-buttons h4,
+.title-buttons h5,
+.title-buttons h6 { float:left; text-align:left; /* TRICKY: align left as opposition to other elements */ line-height: 1.58em;}
+
+/* Buttons - adjust the height of heading buttons in customer account (required for the Address Book) */
+.my-account .title-buttons button span span {
+	height:35px;
+	line-height:37px;
+}
+
+
+/* Secondary headings
+-------------------------------------------------------------- */
+
+/* Cart */
+.cart .discount h2,
+.cart .shipping h2,
+.block .block-title strong,
+
+/* Log in */
+.account-login h2,
+
+/* Checkout log in */
+#opc-login h3
+
+{
+
+        font-size: 1.6666em;
+        line-height: 1.3333em;        
+	font-weight:bold;
+	text-transform: uppercase;
+}
+
+/* Fieldset and multiple checkout */
+.fieldset .legend,
+.multiple-checkout .col2-set h2.legend,
+.info-set h2.legend,
+.multiple-checkout h2,
+
+/*Blog Tital*/
+.postTitle h2,
+  
+/* Account headings
+-------------------------------------------------------------- */
+/* Primary */
+.box-account .box-head h2,
+.order-items h2.table-caption,
+.order-items h2.sub-title,
+.order-items .order-comments h2{
+  
+        /*font-size: 1.5555em;
+        line-height: 1.55em;
+        font-weight: 500;*/
+	
+	font-size: 1.444em;
+	line-height: 1.44em;
+	font-weight: 700;
+	text-transform: uppercase;
+  
+}
+
+/* Secondary */
+.dashboard .box .box-title h3,
+.dashboard .box .box-title h4,
+.order-info-box h2,
+.addresses-list h2{
+  
+  font-size: 1.222em;
+  line-height: 1.222em;
+  
+}
+
+/* Third */
+.dashboard .box-info h4,
+.addresses-list h3{
+
+  font-size: 1.1111em;
+  line-height: 1.111em;
+  
+}
+
+/* Use Shadow
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* Transitions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* Links and other selected elements
+-------------------------------------------------------------- */
+/* IMPORTANT: link transitions should be placed before other transitions */
+a,
+#custommenu-mobile .button{
+	transition:		color 450ms ease-in-out, background-color 450ms ease-in-out;
+	-moz-transition:	color 450ms ease-in-out, background-color 450ms ease-in-out;
+	-webkit-transition:	color 450ms ease-in-out, background-color 450ms ease-in-out;
+	-o-transition:		color 450ms ease-in-out, background-color 450ms ease-in-out;
+}
+a:hover,
+#custommenu-mobile .button:hover{
+	transition-duration:			100ms;
+	-moz-transition-duration:		100ms;
+	-webkit-transition-duration:	        100ms;
+	-o-transition-duration:			100ms;
+}
+
+
+/* Opacity
+-------------------------------------------------------------- */
+/*
+.form-search .button span
+{
+	transition:			opacity 450ms ease-in-out;
+	-moz-transition:	opacity 450ms ease-in-out;
+	-webkit-transition:	opacity 450ms ease-in-out;
+	-o-transition:		opacity 450ms ease-in-out;
+}
+.form-search .button:hover span
+{
+	transition-duration:			100ms;
+	-moz-transition-duration:		100ms;
+	-webkit-transition-duration:	100ms;
+	-o-transition-duration:			100ms;
+}
+*/
+.form-button .button span {
+	transition:		opacity 300ms ease-in-out;
+	-moz-transition:	opacity 300ms ease-in-out;
+	-webkit-transition:	opacity 300ms ease-in-out;
+	-o-transition:		opacity 300ms ease-in-out;
+}
+
+/* Interface icons: toolbar icons, pager, prev/next slide etc.
+-------------------------------------------------------------- */
+.sorter .view-mode .grid,
+.sorter .view-mode .list,
+
+/* Back link */
+.buttons-set .back-link a,
+div.alert a,
+
+/* Add-to links */
+.add-to-links a,
+
+/*Quick View*/
+.quick-view a,
+
+/* collapsible: opener */
+.collapsible .opener,
+
+/* Scroll to top */
+.scrollup,
+
+/*Dropdown*/
+.dropdown,
+.dropdown .dropdown-menu,
+.dropdown .count
+{
+          transition:         color 300ms ease-in-out, background-color 300ms ease-in-out, box-shadow 300ms ease-in-out, opacity 300ms ease-in-out;
+          -moz-transition:    color 300ms ease-in-out, background-color 300ms ease-in-out, box-shadow 300ms ease-in-out, opacity 300ms ease-in-out;
+          -webkit-transition: color 300ms ease-in-out, background-color 300ms ease-in-out, box-shadow 300ms ease-in-out, opacity 300ms ease-in-out;
+          -o-transition:      color 300ms ease-in-out, background-color 300ms ease-in-out, box-shadow 300ms ease-in-out, opacity 300ms ease-in-out;
+          -ms-transition:     color 300ms ease-in-out, background-color 300ms ease-in-out, box-shadow 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+/* Accordions, tabs & other components
+-------------------------------------------------------------- */
+/* TODO: del
+.gen-tabs .tabs a,
+.gen-tabs .acctab,
+.opc .step-title
+{
+	transition:			color 300ms ease-in-out, background-color 300ms ease-in-out, border-color 300ms ease-in-out;
+	-moz-transition:	color 300ms ease-in-out, background-color 300ms ease-in-out, border-color 300ms ease-in-out;
+	-webkit-transition:	color 300ms ease-in-out, background-color 300ms ease-in-out, border-color 300ms ease-in-out;
+	-o-transition:		color 300ms ease-in-out, background-color 300ms ease-in-out, border-color 300ms ease-in-out;
+}
+*/
+
+/* Carets
+-------------------------------------------------------------- */
+#nav a.level-top .caret {
+	transition:		border-top-color 450ms ease-in-out;
+	-moz-transition:	border-top-color 450ms ease-in-out;
+	-webkit-transition:	border-top-color 450ms ease-in-out;
+	-o-transition:		border-top-color 450ms ease-in-out;
+}
+#nav > li:hover a.level-top .caret {
+	transition-duration:			100ms;
+	-moz-transition-duration:		100ms;
+	-webkit-transition-duration:	        100ms;
+	-o-transition-duration:			100ms;
+}
+
+/* Elements with animated color, background color and borders
+-------------------------------------------------------------- */
+/* Forms */
+input.input-text, select, textarea,
+.product-options ul.options-list,
+.quantity_counter,
+
+/* Product image thumbnails */
+.product-view .product-img-box .more-views .thumbnails li a,
+
+/* Product mini-lists */
+.mini-products-list .product-image,
+.cart .crosssell .product-image,
+
+/* Tabs & accordion */
+.gen-tabs .tabs a,
+.gen-tabs .tabs li,
+.gen-tabs .tabs-panels h2.resp-accordion,
+.gen-tabs .tabs-panels h2.resp-accordion a,
+
+/* OPC accordion */
+.opc .step-title
+{
+	transition:		color 300ms ease-in-out, background-color 300ms ease-in-out, border-color 300ms ease-in-out;
+	-moz-transition:	color 300ms ease-in-out, background-color 300ms ease-in-out, border-color 300ms ease-in-out;
+	-webkit-transition:	color 300ms ease-in-out, background-color 300ms ease-in-out, border-color 300ms ease-in-out;
+	-o-transition:		color 300ms ease-in-out, background-color 300ms ease-in-out, border-color 300ms ease-in-out;
+}
+
+/* Structural elements
+-------------------------------------------------------------- */
+/* Layered nav */
+.block-layered-nav dd li,
+
+/* Grid */
+.grid12-1,
+.grid12-2,
+.grid12-3,
+.grid12-4,
+.grid12-5,
+.grid12-6,
+.grid12-7,
+.grid12-8,
+.grid12-9,
+.grid12-10,
+.grid12-11,
+.grid12-12,
+.grid-full,
+.grid-col2-sidebar,
+.grid-col2-main,
+
+/* Products */
+.product-view .product-img-box,
+
+/* Forms */
+/*input.input-text, select, textarea,*/ /*TODO: transit. size*/
+.form-search .input-text,
+
+/* Main menu */
+#nav > li,
+
+/* Misc */
+.header .logo
+{
+	transition:		all 300ms ease-in-out;
+	-moz-transition:	all 300ms ease-in-out;
+	-webkit-transition:	all 300ms ease-in-out;
+	-o-transition:		all 300ms ease-in-out;
+}

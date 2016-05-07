@@ -1,0 +1,23 @@
+<!--@subject Assinatura de newsletter efetuada com sucesso - {{config path="general/store_information/name"}} @-->
+<!--@vars
+{"store url=\"\"":"Store Url",
+"var logo_url":"Email Logo Image Url",
+"var logo_alt":"Email Logo Image Alt",
+"htmlescape var=$customer.name":"Customer Name",
+"var subscriber.getConfirmationLink()":"Subscriber Confirmation Url"}
+@-->
+<!--@styles
+@-->
+{{template config_path="design/email/header"}}
+{{inlinecss file="email-inline.css"}}
+<tr>
+    <td valign="top" class="container-td">
+
+        <p>Newsletter assinada com sucesso!</p>
+        {{if subscriber.couponCode}}        
+        <p>Cupom: {{var subscriber.couponCode}}</p>
+        {{/if}}
+        <p>Para cancelar a assinatura clique no link: <a href="{{var subscriber.getUnsubscriptionLink()}}">{{var subscriber.getUnsubscriptionLink()}}</a>
+    </td>
+</tr>
+{{template config_path="design/email/footer"}}

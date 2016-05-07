@@ -1,0 +1,27 @@
+<div class="block block-brand">
+    <div class="block-title">
+	<strong><span><?php echo $this->__('Product Brands') ?></strong></span>
+    </div>
+    <div class="block-content">
+    <div id="brand-sidebar" class="itemslider">
+	<?php $i=0;foreach ($this->getAllManu() as $manufacturer): ?>
+	    <div class="item">
+		<a href="<?php Mage::getURL() ?>catalogsearch/advanced/result/?manufacturer[]=<?php echo $manufacturer['value'] ?>">
+		    <?php $brandname = $manufacturer['label'] ?>
+		    <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . "brandlogo/" .$brandname . ".png"; ?>" /> 
+		    <?php // echo $manufacturer['label'] ?>
+		</a>
+	    </div>
+	<?php endforeach; ?>
+    </div>
+    </div>
+    <script>
+	j$(document).ready(function() {
+	    j$("#brand-sidebar").owlCarousel({
+		itemsCustom : [
+		    [0, 1]
+		]<?php echo Mage::helper("ExtraConfig")->sliderSetting(); ?>
+	    });
+	});
+    </script>
+</div>

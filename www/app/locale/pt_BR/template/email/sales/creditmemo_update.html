@@ -1,0 +1,43 @@
+<!--@subject {{var store.getFrontendName()}}: Reembolso # {{var creditmemo.increment_id}} Atualizado para {{var order.getStatusLabel()}} @-->
+<!--@vars
+{"store url=\"\"":"Store Url",
+"var logo_url":"Email Logo Image Url",
+"var logo_alt":"Email Logo Image Alt",
+"htmlescape var=$order.getCustomerName()":"Customer Name",
+"var order.increment_id":"Order Id",
+"var order.getStatusLabel()":"Order Status",
+"store url=\"customer/account/\"":"Customer Account Url",
+"var comment":"Invoice Comment",
+"var store.getFrontendName()":"Store Name"}
+@-->
+<!--@styles
+@-->
+
+
+{{template config_path="design/email/header"}}
+{{inlinecss file="email-inline.css"}}
+<tr>
+    <td valign="top" class="container-td action-content">  
+
+        <h1 style="font-size:22px; font-weight:normal; line-height:22px; margin:0 0 11px 0;">Ol&aacute; {{htmlescape var=$order.getCustomerName()}},</h1>
+        <p style="font-size:12px; line-height:16px; margin:0 0 10px 0;">
+            O status de seu pedido #{{var order.increment_id}} foi atualizado para: <strong>{{var order.getStatusLabel()}}</strong>.
+        </p>
+        {{if comment}}
+                        <table cellspacing="0" cellpadding="0" class="message-container">
+                            <tr>
+                                <td>{{var comment}}</td>
+                            </tr>
+                        </table>
+                        {{/if}}
+        <p style="font-size:12px; line-height:16px; margin:0 0 10px 0;">Voc&ecirc; pode verificar o andamento do seu pedido clicando em <a href="{{store url="customer/account/"}}" style="color:#1E7EC8;">acessar sua conta</a>.</p>
+        
+        <p style="font-size:12px; line-height:16px; margin:0;">
+            Se voc&ecirc; tiver qualquer d&uacute;vida, fique &agrave; vontade para nos enviar um email
+            <a href="mailto:{{config path='trans_email/ident_support/email'}}" style="color:#1E7EC8;">{{config path='trans_email/ident_support/email'}}</a>
+            ou ligue para {{config path='general/store_information/phone'}} em hor&aacute;rio comercial.
+        </p>
+    </td>
+</tr>
+
+{{template config_path="design/email/footer"}}

@@ -1,0 +1,64 @@
+/**
+ *Theme Content Construction Kit
+ */
+
+/* Layout %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* Vertically centered content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.v-centered-content {
+	display:table;
+}
+.v-centered-content .v-center {
+	display:table-cell;
+	vertical-align:middle;
+}
+
+/* Heading of a content section
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.section-title{
+        padding-right: 80px;
+        margin-bottom: 5px;
+        clear: both;
+}
+
+/* Vertical links %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+.links > li > a { padding:0 0.5833em;line-height: 3em; } /* padding:0 7px; */
+.links > li > a:hover{color: #2ba08b;}
+
+/* Basic links, no separators
+-------------------------------------------------------------- */
+.links > li { display: inline-block; }
+.links > li > a { display:block;text-transform: uppercase;}
+
+/* Links with separators (at the right side)
+-------------------------------------------------------------- */
+.links-wrapper-separators .links > li { margin-left:-3px; }
+.links-wrapper-separators .links > li > a {
+ background-image:url(../../images/link-separator.png);
+ background-position:right center;
+ background-repeat:no-repeat;
+}
+.links-wrapper-separators .links > li.last > a { background-image:none; }
+.links-wrapper-separators .links > li.first > a{padding-left: 3px;}
+.links-wrapper-separators .links > li.hide-separator > a { background-image:none; }
+.links-wrapper-separators .links > li.separator-left > a { background-position:left center; }
+
+/* Links with separators (at the left side)
+-------------------------------------------------------------- */
+.links-wrapper-separators-left .links > li { margin-left:-3px; }
+.links-wrapper-separators-left .links > li > a {
+ background-image:url(../../images/link-separator.png);
+ background-position:left center;
+ background-repeat:no-repeat;
+}
+
+.links-wrapper-separators-left .links > li.first > a { background-image:none; }
+.links-wrapper-separators-left .links > li.hide-separator > a { background-image:none; }
+.links-wrapper-separators-left .links > li.separator-right > a { background-position:right center; }
+

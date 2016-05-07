@@ -1,0 +1,147 @@
+<?php if(Mage::getStoreConfig('multiproduct/custom/enable')) : ?>
+<?php
+    $tabOptions = Mage::getStoreConfig('multiproduct/custom/multi_option');    
+    $displayBlock = false;
+    $tabArray = array();
+    if ($tabOptions != null || $tabOptions != " ") {
+        $displayBlock = true;
+        $firstTab = true;
+        $tabOptions = explode(",",$tabOptions);        
+        $displayOrder = Mage::getStoreConfig('multiproduct/custom/order_options');
+        if ($displayOrder != null && $displayOrder != "") {
+            $displayOrder = explode(",",$displayOrder);
+            foreach ($displayOrder as $order) {
+                foreach ($tabOptions as $tab) {
+                    $tabValue = explode("_",$tab);
+                    if($tabValue[0] == $order) {
+                        $tabArray[] = $tabValue[1];
+                    }
+                }
+            }
+        }
+        else {            
+            foreach ($tabOptions as $tab) {
+                $tabValue = explode("_",$tab);                
+                $tabArray[] = $tabValue[1];          
+            }
+        }
+	$tabArray = array_slice($tabArray,0,2);
+    }    
+?>
+
+<?php if($displayBlock): ?>
+    <div class="product-tabs">
+        <div class="gen-tabs">
+            <ul class="tabs" id="product-tabs">
+                <?php foreach ($tabArray as $tabArrayValue) {
+                    if ($firstTab) {
+                        $firstTab = false;
+                        $defaultTabs = array("new","random","rated");
+                        $filterBy = $tabArrayValue;
+                        $activeTab = strtolower($tabArrayValue);                        
+                        if(in_array($activeTab,$defaultTabs)) {
+                            $activeTab = "_default_".$activeTab;
+                        }
+                        else {
+                            $activeTab = "_customlist";
+                        }
+                ?>
+                    <li class="first active" data-product="<?php echo $tabArrayValue; ?>"><?php if($tabArrayValue == "new") { echo strtoupper("novidades");} else { echo strtoupper($tabArrayValue);} ?><span class="icon"><i class="fa fa-angle-down"></i></span></li>
+                <?php  } else { ?>
+                    <li class="last" data-product="<?php echo $tabArrayValue; ?>"><?php if($tabArrayValue == "new") { echo strtoupper("novidades");} else { echo strtoupper($tabArrayValue);} ?><span class="icon"><i class="fa fa-angle-down"></i></span></li>
+                <?php }}?>
+            </ul>
+        </div>
+    </div>    
+    <div id="dynamic-product-tabs" class="product-tabs-content">
+        <div id="multiproduct-loader" style="display: none; height: 200px;text-align: center;" class="v-grid-container">
+	    <div class="v-grid">
+		<div class="ajaxcartpro_progress"></div>
+	    </div>
+	</div>
+        <div id="multiproduct-block">
+	    <?php $page = Mage::app()->getLayout()->getBlock('root')->getTemplate();	    
+		if ($page == "page/1column.phtml") {
+		    $page = 1;
+		}
+		elseif ($page == "page/2columns-left.phtml" || $page == "page/2columns-right.phtml") {
+		    $page = 2;
+		}
+		elseif($page == "page/3columns.phtml") {
+		    $page = 3;		
+		}
+		else {
+		    $page = 0;
+		}		
+	    ?>
+            <?php echo $this->getLayout()->createBlock('multiproduct/product'.$activeTab)->setCustomproduct($filterBy)->setBlockLimitId("1c")->setTemplate('catalog/product/multiproduct/list.phtml')->toHtml(); ?>
+        </div>
+	<div class="load-more-holder">
+	    <input type="hidden" name="page_id" id="page_id" value="1" />
+	    <a href="#loadingproduct">
+		<span class="load-img">
+		    <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN);?>/frontend/modello/default/images/opc-ajax-loader.gif" alt="Loading next step..." title="Loading next step..." class="v-middle">
+		</span>
+		<span class="plus-sign">+</span>
+		mostrar mais produtos
+	    </a>
+	</div>	
+    </div>
+        
+    <script type="text/javascript">
+        
+        j$(document).on('click', "ul#product-tabs li", function () {    
+            j$('ul#product-tabs li').removeClass('active');                 
+            j$(this).addClass('active');
+            var id = j$(this).data("product");
+            j$("#multi-product").empty();
+            j$("#multiproduct-loader").show();
+            var url = '<?php echo Mage::getBaseUrl()."multiproduct/product/index";?>';
+            url += '?pro='+id+'&layout=<?php echo $page; ?>';                   
+            try {
+                j$.ajax( {
+                    url : url,
+		    dataType: 'json',
+                    success : function(data) {                
+                        j$("#multi-product").html(data.product);
+                        j$("#multiproduct-loader").hide();
+			j$('#page_id').val(1);
+			j$('.load-more-holder').show();			
+			if (data.pageposition == 'last') {
+			    j$('.load-more-holder').hide();
+			}
+                    }
+                });
+            } catch (e) {
+            }
+        });
+	
+	
+	j$(document).on('click', ".load-more-holder a", function () {    
+            j$('.load-more-holder a .load-img').css('display','inline');                 
+            j$('.load-more-holder a .plus-sign').css('display','none');             
+            var id = j$('ul#product-tabs li.active').data("product");
+	    var pageid = parseInt(j$('#page_id').val());	    
+            var url = '<?php echo Mage::getBaseUrl()."multiproduct/product/loadmore";?>';
+            url += '?pro='+id+'&layout=<?php echo $page; ?>'+'&pageid='+pageid;	    
+            try {
+                j$.ajax( {
+                    url : url,
+		    dataType: 'json',
+                    success : function(data) {			
+			j$('#multiproduct-block #multi-product').append(data.product);
+			var newPage = pageid + 1;
+			j$('#page_id').val(newPage);			
+			j$('.load-more-holder a .load-img').css('display','none');                 
+			j$('.load-more-holder a .plus-sign').css('display','inline');			
+			if (data.pageposition == 'last') {
+			    j$('.load-more-holder').hide();
+			}
+                    }
+                });
+            } catch (e) {
+            }
+        });
+</script>
+<?php endif; ?>
+<?php endif; ?>

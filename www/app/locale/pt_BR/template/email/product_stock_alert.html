@@ -1,0 +1,18 @@
+<!--@subject Alerta de produto em estoque - {{config path="general/store_information/name"}} @-->
+<!--@vars
+{"var customerName":"Customer Name",
+"var alertGrid":"Alert Data Grid"}
+@-->
+{{template config_path="design/email/header"}}
+{{inlinecss file="email-inline.css"}}
+
+<tr>
+    <td valign="top" class="container-td">
+        <h1>{{var customerName}}</h1>
+
+        {{var alertGrid}}
+    </td>
+</tr>
+
+
+{{template config_path="design/email/footer"}}

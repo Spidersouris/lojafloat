@@ -1,0 +1,41 @@
+<?php $i = 0; ?>
+
+<?php $bannerCollection = $this->getBannerCollection(); ?>
+<?php $configData = Mage::getStoreConfig('bannerslider'); ?>
+<div class="clear"></div>
+<div class="banner<?php if(Mage::getStoreConfig('mygeneral/banner/bannerwidth')){ ?> container<?php } ?><?php if(Mage::getStoreConfig('mygeneral/banner/breakpoint')){ ?> martop20<?php } ?>">
+	
+	<ul class="banner-slider <?php if(Mage::getStoreConfig('mygeneral/banner/bannerwidth')){ ?>grid-full<?php } ?>">	
+	<?php foreach ($bannerCollection as $banner): ?>
+		<li class="item">
+			    <a href="<?php echo $banner['weblink'];?>"><img src=" <?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . $banner['filename']?>" /></a>
+				<?php if ($configData['settings']['show_description'] == '1'):?>
+					<div class="caption-container">	
+						<div class="caption">
+							<div class="container">				
+								<h2 class="heading"><?php echo $banner['title']?></h2>
+				
+								<p><?php echo $banner['content']; ?></p>
+							</div>
+						</div>
+					</div>
+				<?php endif;?>
+		</li>
+		
+		 <?php $i++; endforeach; ?>
+	</ul>		    
+			   
+</div>
+<div class="clear"></div>
+<?php if($bannerwidth == 'template'){ ?>
+</div>
+<?php } ?>   
+
+<script>
+j$(document).ready(function() {
+	j$(".banner-slider").owlCarousel({
+		singleItem:true,
+		autoHeight : true<?php echo Mage::helper("ExtraConfig")->bannerSliderSetting(); ?>
+	});
+});
+</script>

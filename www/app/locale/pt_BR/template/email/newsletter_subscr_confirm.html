@@ -1,0 +1,23 @@
+<!--@subject Confirmação de assinatura de newsletter - {{config path="general/store_information/name"}} @-->
+<!--@vars
+{"store url=\"\"":"Store Url",
+"var logo_url":"Email Logo Image Url",
+"var logo_alt":"Email Logo Image Alt",
+"htmlescape var=$customer.name":"Customer Name",
+"var subscriber.getConfirmationLink()":"Subscriber Confirmation Url"}
+@-->
+<!--@styles
+@-->
+
+{{template config_path="design/email/header"}}
+{{inlinecss file="email-inline.css"}}
+
+<tr>
+    <td valign="top" class="container-td">
+
+        <h1 style="font-size:22px; font-weight:normal; line-height:22px; margin:0 0 11px 0;"">Obrigado por assinar nossa newsletter.</h1>
+        <p style="border:1px solid #E0E0E0; font-size:12px; line-height:16px; margin:0; padding:13px 18px; background:#F9F9F9;">Para come&ccedil;ar a receber nossas promo&ccedil;&otilde;es e novidades, voc&ecirc; precisa confirmar sua assinatura clicando no link:<br />
+        <a href="{{var subscriber.getConfirmationLink()}}" style="color:#1E7EC8;">{{var subscriber.getConfirmationLink()}}</a><p>
+    </td>
+</tr>
+{{template config_path="design/email/footer"}}

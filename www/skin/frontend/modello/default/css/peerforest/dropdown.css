@@ -1,0 +1,130 @@
+/**
+ * Drop-down
+ */
+
+
+
+/* Dropdown box %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+.dropdown { position:relative; }
+.dropdown:hover { /*z-index:4000;*/ }
+
+/* Dropdown toggle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.dropdown-toggle {
+	display:block;
+	cursor:default;
+}
+
+/* Inside Dropdown-toggle
+-------------------------------------------------------------- */
+.dropdown-toggle * { display:inline-block; }
+.dropdown-toggle .label { padding-right:2px; }
+.dropdown-toggle .value {}
+.dropdown-toggle .dropdown-icon {
+	width:18px;
+	text-indent:-9999px;
+	background-position:0 50%;
+	background-repeat:no-repeat;
+}
+.dropdown-toggle .count{
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background-color: #2ba08b;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 18px;
+    color: #FFF;    
+}
+
+/* Predefined icons
+-------------------------------------------------------------- */
+.dropdown-toggle .icon{text-indent: 0px;line-height: 27px;color: inherit !important;}
+.dropdown-toggle .icon.first { margin-left:-5px; }
+.dropdown-toggle .icon.close-to-text { margin-right:-5px; }
+
+
+/* Cover 'dropdown-toggle' (and 'dropdown-menu' shadow) with additional inner div
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.dropdown-toggle.cover > div { padding:0 10px; cursor:default; }
+.dropdown:hover > .dropdown-toggle.cover > div { /*background-color:#fff;*/ }
+/*.dropdown:hover .dropdown-toggle.cover > div,*/
+.dropdown:hover > .dropdown-toggle.cover > div {
+	z-index:4001;
+	position:relative;
+}
+
+
+/* Dropdown menu
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.dropdown-menu {
+        z-index: 4000;
+        padding: 20px;
+        line-height: 1.5em;
+        text-align: left;
+        padding-top: 75px;
+        list-style: none;
+        
+        opacity: 0;
+        background-color: #FFFFFF;
+        position: absolute;
+        width: 109%;
+        left: -10px;
+        top: -20px;
+        
+        box-shadow:             0px 0px 3px #dedede;
+        -moz-box-shadow:        0px 0px 3px #dedede;
+        -webkit-box-shadow:     0px 0px 3px #dedede;
+        -o-box-shadow:          0px 0px 3px #dedede;
+        -ms-box-shadow:         0px 0px 3px #dedede;        
+        
+        box-sizing:             border-box;
+        -moz-box-sizing:        border-box;
+        -webkit-box-sizing:     border-box;
+        -o-box-sizing:          border-box;
+        -ms-box-sizing:         border-box;
+}
+.dropdown-menu.left-hand {
+	left:auto;
+	right:0;
+}
+
+/* When dropdown menu is an unordered list
+-------------------------------------------------------------- */
+/* Everything is inline-block, except links */
+.dropdown-menu > li * { display:inline-block; }
+.dropdown-menu > li > a { display:block; }
+
+.dropdown-menu > li { white-space:nowrap; }
+.dropdown-menu > li .label { margin-right:8px; }
+.dropdown-menu .dropdown-icon {
+	width:18px;
+	text-indent:-9999px;
+	background-position:0 50%;
+	background-repeat:no-repeat;
+}
+
+/* Use Only For Currency Or Language
+-------------------------------------------------------------- */
+
+.language .language-menu a,
+.currency .currency-menu a{margin: 0 2px;text-transform: uppercase;}
+
+.language .language-menu a:first-child{margin-left: 0px;}
+.currency .currency-menu a:last-child{margin-right: 0px;}
+
+.language .language-menu a.selected,
+.currency .currency-menu a.selected{/*font-size: 14px;*/font-weight: bold;}
+
+
+/* Use Only For Wishlist
+-------------------------------------------------------------- */
+
+.header .wishlist{float: right;}

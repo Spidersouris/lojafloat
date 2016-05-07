@@ -1,0 +1,41 @@
+/* Collapsible %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+.collapsible { position:relative; }
+.collapsible .block-title{
+	padding-top: 10px;
+	padding-right: 40px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #D6D6D6;
+	margin-bottom: 20px;
+	font-size: 1.333em;/*16px*/
+	line-height: 1.333em;
+	font-weight: 700;
+}
+
+/* Opener
+-------------------------------------------------------------- */
+.collapsible .opener {
+	position:absolute;
+	right:0;
+	top:7px;
+	display:block;
+	cursor:pointer;
+	font-family: FontAwesome;
+	width:34px;
+	height:34px;
+	background-color:#2C343D; /*IE*/
+	background-color:rgba(0,0,0, 0.10);
+	background-position:center center;
+	background-repeat:no-repeat;
+	border-radius:3px;
+        color: #FFF;
+	font-size: 16px;
+	text-align: center;
+	line-height: 36px;
+	text-indent: 4px;
+}
+.collapsible .opener:hover {
+	background-color:#595959; /*IE*/
+	background-color:rgba(0,0,0, 0.20);
+}

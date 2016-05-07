@@ -1,0 +1,27 @@
+<root>
+  <cms_page>
+    
+    <block>
+        <title>Modello Fluid Responsive Magento Theme</title>
+        <identifier>modello-home</identifier>
+        <status>1</status>
+        <content>
+          <![CDATA[
+            <div>{{block type="core/template" template="catalog/product/multiproduct/multiproduct-tab.phtml"}}</div>
+            <div>{{block type="multiproduct/product_default_bestseller" template="catalog/product/multiproduct/multi-block/bestseller.phtml"}}</div>
+          ]]>
+        </content>        
+    </block>
+    
+<!--    <block>
+      <title>Typography</title>
+      <identifier>typography</identifier>
+      <status>1</status>
+      <content>
+        <![CDATA[
+            
+        ]]>
+      </content>        
+    </block>-->
+  </cms_page>
+</root>

@@ -1,0 +1,24 @@
+<root>
+    <import>
+        <banner>
+            <title>KEY TRENDS</title>            
+            <filename>default-banner1.png</filename>
+            <status>1</status>            
+            <sorting_order>1</sorting_order>            
+        </banner>
+        
+        <banner>
+            <title>KEY TRENDS</title>            
+            <filename>default-banner2.png</filename>
+            <status>1</status>            
+            <sorting_order>2</sorting_order>            
+        </banner>
+        
+        <banner>
+            <title>KEY TRENDS</title>            
+            <filename>default-banner3.png</filename>
+            <status>1</status>            
+            <sorting_order>3</sorting_order>            
+        </banner>
+    </import>
+</root>
